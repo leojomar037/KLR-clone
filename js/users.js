@@ -7,7 +7,6 @@ let first_name = document.getElementById("first_name");
     let email_error = document.getElementById("email_error");
     let password = document.getElementById("password");
     let password_error = document.getElementById("password_error");
-    // let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/i;
     let confirm_password = document.getElementById("confirm_password");
     let confirm_password_error = document.getElementById("confirm_password_error");
     let gender = document.getElementById("gender");
