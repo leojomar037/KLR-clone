@@ -1,7 +1,7 @@
 <?php
     $host = "localhost";
     $user = "root";
-    $password = "12345";
+    $password = "@K3n1995";
     $database = "klrtutorials";
     $port = 3307;
 

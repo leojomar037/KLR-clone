@@ -1,55 +1,55 @@
 .dashboard .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
-  gap: 1rem;
-  margin: 0;
-  overflow: hidden;
-  overflow-y: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    gap: 1rem;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .dashboard .container .card {
-  border-left: .2rem gray solid;
-  background-color: aliceblue;
-  width: 90vw;
-  height: 43vh;
-  padding: .1rem;
-  display: -ms-grid;
-  display: grid;
+    border-left: .2rem gray solid;
+    background-color: aliceblue;
+    width: 90vw;
+    height: 43vh;
+    padding: .1rem;
+    display: -ms-grid;
+    display: grid;
 }
 
 .dashboard .container .card .pic {
-  width: 100%;
-  height: 18vh;
-  border: 1px solid;
+    width: 100%;
+    height: 18vh;
+    border: 1px solid;
 }
 
 .dashboard .container .card .pic img {
-  border: 1px solid;
+    border: 1px solid;
 }
 
 .dashboard .container .card .info {
-  display: -ms-grid;
-  display: grid;
-  padding: .8rem;
+    display: -ms-grid;
+    display: grid;
+    padding: .8rem;
 }
 
 .dashboard .container .card .info a {
-  text-decoration: none;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -ms-grid-column-align: end;
-      justify-self: end;
+    text-decoration: none;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    -ms-grid-column-align: end;
+    justify-self: end;
 }
 
 @media screen and (min-width: 750px) {
-  .dashboard .container .card {
-    width: 22vw;
-    height: 40vh;
-  }
+    .dashboard .container .card {
+        width: 22vw;
+        height: 40vh;
+    }
 }

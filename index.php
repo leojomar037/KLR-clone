@@ -13,13 +13,13 @@
 </head>
 
 <body class="index">
-<?php require('./login.php') ?>
+
     <header>
         <div class="navbar">
-            <div class="container flex">
-                <h2> <a href="#" class="logo">Logo</a></h2>
+            <div class="container-nav flex">
+                <h2 class="con-logo"> <a href="#" class="logo">Logo</a></h2>
                 <nav class="navigation">
-                    <ul>
+                    <ul id="menuList">
                         <li><a href="#home" class="active links">Home</a></li>
                         <li><a href="#program" class="links">Programs</a></li>
                         <li><a href="#about" class="links">About</a></li>
@@ -27,15 +27,16 @@
                         <li>
                             <a href="#reviews" class="links">Reviews</a></li>
                         <li>
-                            <a class="btn btn-log"  id="btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
+                            <!-- <a class="btn btn-log"  id="btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a> -->
+                            <a href="login.php" class="btn btn-log"  id="btn-login" >Log In</a>
                         </li>
                         <li>
-                            <a href="registration.php" class="btn btn-sign">Sign Up</a>
+                            <a href="login.php" class="btn btn-sign">Sign Up</a>
                         </li>
                     </ul>
-
-
                 </nav>
+                <!-- <img src="./images/menu.jfif" alt="" class="menu-icon" onclick="togglemenu()"> -->
+                <i class="fa-solid fa-bars menu-icon" onclick="togglemenu()"></i>
 
 
                 <!-- <label for="check ">
@@ -46,8 +47,8 @@
         </div>
     </header>
     <section class="showcase " id="home">
-        <div class="container grid ">
-            <div class="showcase-text ">
+        <div class="container grid">
+            <div class="showcase-text">
                 <h1>Giving you a<br><span> KLR</span> future</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi recusandae totam hic natus fugiat reiciendis accusamus optio nulla .</p>
                 <a href="# " class="btn btn-outline ">More Info</a>
@@ -76,11 +77,11 @@
 
 
     <!-- Programm -->
-    <section class="programm " id="program">
+    <section class="programm" id="program">
         <h1>Our Program</h1>
-        <div class="container grid-4 ">
+        <div class="container grid-4">
             <div class="content ">
-                <img src="images/kids-img.avif " alt=" ">
+                <img src="images/img-elem.avif" alt=" ">
                 <h3>Elementary</h3>
                 <div class="details ">
                     <ul>
@@ -93,10 +94,10 @@
                     </ul>
                 </div>
 
-                <button class="enroll ">Enroll Now</button>
+                <button class="enroll">Enroll Now</button>
             </div>
-            <div class="content ">
-                <img src="images/img-prog-3.avif " alt=" ">
+            <div class="content">
+                <img src="images/img-jr-hs.avif" alt=" ">
                 <h3>Jr High School</h3>
                 <div class="details ">
                     <ul>
@@ -108,10 +109,10 @@
                         <li><i class="fa-solid fa-check "></i>Flexibility</li>
                     </ul>
                 </div>
-                <button class="enroll ">Enroll Now</button>
+                <button class="enroll">Enroll Now</button>
             </div>
-            <div class="content ">
-                <img src="images/img-prog-2.avif " alt=" ">
+            <div class="content">
+                <img src="images/img-hs.avif" alt="">
                 <h3>Sr High School</h3>
                 <div class="details ">
                     <ul>
@@ -126,7 +127,7 @@
                 <button class="enroll ">Enroll Now</button>
             </div>
             <div class="content ">
-                <img src="images/img-prog-4.avif " alt=" ">
+                <img src="images/img-college.avif" alt=" ">
                 <h3>College</h3>
                 <div class="details ">
                     <ul>
@@ -179,7 +180,7 @@
                             <h2 class="name "> Ken Domenick Sabella</h2>
                             <p class="description ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis nemo vero dolor </p>
 
-                            <button class="button-slider "> View More</button>
+                            <button class="button-slider  "> View More</button>
                         </div>
                     </div>
                     <div class="slider-card swiper-slide ">
