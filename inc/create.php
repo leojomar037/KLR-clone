@@ -18,10 +18,7 @@ if(isset($_POST['create'])){
     $original_password = $_POST['regpassword'];
     $confirm_password = $_POST['regconfirm_password'];
     $role = $_POST['role'];
-    $adult_name = $_POST['adult_name'];
-    $adult_number = $_POST['adult_number'];
-    $adult_email = $_POST['adult_email'];
-    $relation = $_POST['relation'];
+
   
   
         if (empty($first_name) || empty($last_name) || empty($email) || empty($password) || empty($role)) {
