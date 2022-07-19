@@ -7,8 +7,14 @@
 .index .container {
   max-width: 100vw;
   /* background-color: red; */
-  margin: 0 auto;
+  margin: auto;
   overflow: auto;
+  padding: 0 4rem;
+}
+
+.index .container-nav {
+  max-width: 100vw;
+  margin: auto;
   padding: 0 4rem;
 }
 
@@ -22,7 +28,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
 }
 
 .index .grid {
@@ -48,8 +53,8 @@
 .index .grid-4 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   -ms-flex-pack: distribute;
       justify-content: space-around;
   gap: 2rem;
@@ -160,20 +165,23 @@
   display: inline-block;
   padding: .5rem 1.5rem;
   cursor: pointer;
-  background: #EB4C63;
-  color: #fff;
+  background: #4D40CC;
+  color: #4D40CC;
   border: none;
   border-radius: 5px;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
 }
 
 .index .btn-outline {
   background-color: transparent;
-  border: 1px #fff solid;
+  border: 1px #4D40CC solid;
 }
 
 .index .btn-outline-2 {
   background-color: transparent;
-  border: 1px #f66e23 solid;
+  border: 1px #4D40CC solid;
 }
 
 .index .btn:hover {
@@ -207,25 +215,27 @@
 
 .index .navbar .btn {
   display: block;
-  margin: .1rem;
-  padding: .4rem .5rem;
+  margin: 0 .1rem;
+  padding: .3rem .5rem;
   cursor: pointer;
   border-radius: .3rem;
-  border: .1rem white solid;
+  border: 0.1rem #4D40CC solid;
   width: 5rem;
 }
 
 .index .navbar .btn-sign {
+  width: 100px;
   background: white;
-  color: #f66e23;
-  border: 0.1rem #f66e23 solid;
+  color: #333;
+  border: 0.1rem #4D40CC solid;
 }
 
 .index .navbar .btn-sign:hover {
-  border: .1rem white solid;
+  border: 0.1rem #4D40CC solid;
 }
 
 .index .navbar .btn-log {
-  color: white;
+  color: #333;
+  width: 100px;
   background: #f66e23;
 }

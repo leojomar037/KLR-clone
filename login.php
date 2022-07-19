@@ -1,4 +1,3 @@
-
 <?php
     require ('./connection/database.php');
     session_start();
@@ -37,116 +36,176 @@
                 echo "<script>alert('Successful')</script>";
             }
              else {
-                // $_SESSION['status'] = 'invalid';
                 echo "<script>alert('Log in failed! Wrong password!')</script>";
                 echo "<script>window.location.href = './login.php'</script>";
             }
         }
 
-        //     if (mysqli_num_rows($query_match) > 0 && password_verify($password, $current_password)) {
-        //         // $_SESSION['status'] = 'valid';
-        //         // $_SESSION['email'] = $mysql_array['email'];
-        //         // $_SESSION['user_role'] = $mysql_array['user_role'];
-        //         // echo "<script>window.location.href = '../index.php'</script>";
-        //         echo "<script>alert('Successful')</script>";
-        //     } else {
-        //         $_SESSION['status'] = 'invalid';
-        //         echo "<script>alert('Log in failed! Wrong password!')</script>";
-        //         echo "<script>window.location.href = './login.php'</script>";
-        //     }
-        // }
     }
 ?>
 
-
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Login</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="css/login.css?v=<?php echo time(); ?>">
-    </head>
-    <body>
-        
-    <!-- Button trigger modal
-    <button class="btn btn-login" id="btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
-    Login
-    </button>
-     -->
+<html lang="en">
 
-    <!-- Modal -->
-    <div class="modal fade mt-5" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form class="d-grid" action="./login.php" method="post">
-                <?php
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style-2.css"> -->
+    <link rel="stylesheet" href="css/sign-in.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <main>
+        <div class="box">
+            <div class="inner-box">
+                <div class="forms-wrap">
+                    <form action="./login.php" class="sign-in-form" method="post">
+                    <?php
                     if (isset($_GET['error'])){?>
                         <p class = "error alert alert-danger" ><i class='bi bi-exclamation-circle-fill'></i> <?php echo $_GET['error']; ?></p>    
                     <?php }?>
-                <?php
+                        <?php
                     if (isset($_GET['success'])){?>
                         <p class = "success alert alert-success" ><i class="bi bi-check-circle-fill"></i> <?php echo $_GET['success']; ?></p>    
-                <?php }?>
-                <div class="modal-body">
-                
-                    <!-- Email input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="email" required>Email address<span class="text-danger">*</span></label>
-                        <input 
-                            type="email" 
-                            name="email" 
-                            id="email" 
-                            onblur="validateEmail()"
-                            class="form-control input-form" 
-                            autocomplete="off" />
-                        <span class="text-danger my-0 py-0" id="email_error"></span>
-                    </div>
-
-                    <!-- Password input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="password" required>Password<span class="text-danger">*</span></label>
-                        <input 
-                            type="password" 
-                            name="password" 
-                            id="password"  
-                            oninput="validatePasswordLength()" 
-                            onblur="validatePassword()" 
-                            class="form-control input-form" />
-                        <span class="text-danger my-0 py-0" id="password_error"></span>
-                    </div>
-
-
-                    <!-- Submit button -->
-                    <div class="d-flex justify-content-center mt-4">
-                        
+                        <?php }?>
+                    
+                        <div class="logo">
+                            <img src="Images/sign-in.jpg" alt="">
+                            <h4>KLR Tutorials</h4>
                         </div>
-                
+                        <div class="heading">
+                            <h2>Welcome back</h2>
+                            <h6>Not registered yet?</h6>
+                            <a href="#" class="toggle">Sign up</a>
+                        </div>
+
+                        <div class="actual-form">
+                            <div class="input-wrap">   
+                                <input type="text" minlength="4" name="email" id="email"  class="input-field" autocomplete="off" onblur="validateEmail()" required>
+                                <label>Email</label>
+                                <div class="error" id="email_error"></div>
+                            </div>
+                        
+                            <div class="input-wrap">
+                                <input type="password"  name="password" id="password"  class="input-field" autocomplete="off" oninput="validatePasswordLength()"  onblur="validatePassword()" required>
+                                <label>Password</label>
+                                <div class="error" id="password_error"></div>
+                            </div>
+                            <input type="submit" name="login"   value="Login" class="sign-btn">
+
+                            <p class="text">
+                                Forgotten your password or you login details ?
+                                <a href="">Get Help</a> Signing in
+                            </p>
+                        </div>
+
+                    </form>
+                    <form action="" autocomplete="off" class="sign-up-form">
+                        <div class="logo">
+                            <img src="Images/sign-in.jpg" alt="">
+                            <h4>KLR Tutorials</h4>
+                        </div>
+                        <div class="heading">
+                            <h2>Get Started</h2>
+                            <h6>Already have an account ?</h6>
+                            <a href="#" class="toggle">Sign in</a>
+                        </div>
+
+                        <div class="actual-form">
+                            <div>
+                                <div class="input-wrap">
+                                    <input type="text" minlength="4" class="input-field" autocomplete="off" required>
+                                    <label>First Name</label>
+                                </div>
+                                <div class="input-wrap">
+                                    <input type="text" minlength="4" class="input-field" autocomplete="off" required>
+                                    <label>Last Name</label>
+                                </div>
+                                <div class="input-wrap">
+                                    <input type="password" minlength="4" class="input-field" autocomplete="off" required>
+                                    <label>Password</label>
+                                </div>
+                                <div class="input-wrap">
+                                    <input type="password" minlength="4" class="input-field" autocomplete="off" required>
+                                    <label>Confirm Password</label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="input-wrap">
+                                    <input type="text" minlength="4" class="input-field" autocomplete="off" required>
+                                    <label>Email</label>
+                                </div>
+                                <div class="input-wrap">
+
+                                    <select name="gender" class="input-field" id="gender">
+                                        <option value="" ></option>
+                                        <option value="4">Male</option>
+                                        <option value="5">Female</option>
+                                       
+                                    </select>
+                                    <label>Gender Upon Birth</label>
+                                </div>
+                                <div class="input-wrap">
+
+                                    <select name="role" class="input-field" id="role" onblur="validateRole()">
+                                        <option value="" ></option>
+                                        <option value="2">Student</option>
+                                        <option value="3">Tutor</option>
+                                    </select>
+                                    <label>Role</label>
+                                </div>
+                                <div class="input-wrap bday">
+                                    <input type="date" name="birthdate" id="birthdate" minlength="4" class="input-field" autocomplete="off" required>
+                                    <label>Birthday</label>
+
+                                </div>
+                            </div>
+
+
+                            <input type="submit" value="Sign In" class="sign-btn" name="" id="">
+                            <!-- <p class="text">
+                                By signing up, I agree to the <a href="#">Terms of service</a> and <a href="#">Privacy policy</a>
+                            </p> -->
+                        </div>
+
+                    </form>
                 </div>
-                <div class="modal-footer">
-                    <input type="submit" name="login" class="btn btn-login " value="Login">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <div class="carousel">
+                    <div class="images-wrapper">
+                        <img src="images/img-log-1.jpg" class="image img-1 show" alt="">
+                        <img src="images/img-log-2.jpg" class="image img-2" alt="">
+                        <img src="images/img-log-3.jpg" class="image img-3" alt="">
+
+                    </div>
+                    <div class="text-slider">
+                        <div class="text-wrap">
+                            <div class="text-group">
+                                <h2>Create your own courses</h2>
+                                <h2>Customize as you like</h2>
+                                <h2>Invite students to your class</h2>
+                            </div>
+                        </div>
+                        <div class="bullets">
+                            <span class="active" data-value="1"></span>
+                            <span data-value="2"></span>
+                            <span data-value="3"></span>
+                        </div>
+                    </div>
 
                 </div>
-            </form>
             </div>
         </div>
-    </div>
+
+    </main>
 
 
-        
-<!-- JavaScript Bundle with Popper -->
+    <!-- Javascript -->
+    <script src="js/app.js"></script>
+    <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script>
         const regRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -157,41 +216,42 @@
 
         function validateEmail(){
         if(email.value === ""){
-            email.style.border = "2px solid red";
+            // email.style.border = "1px solid red";
             email_error.innerHTML = "<i class='bi bi-exclamation-circle-fill'></i> Please provide email.";
         } else if(!regRegex.test(email.value)){
-            email.style.border = "2px solid red";
+            // email.style.border = "1px solid red";
             email_error.innerHTML = "<i class='bi bi-exclamation-circle-fill' ></i> Invalid email format."
         } else {
-            email.style.border = "1px solid rgb(246, 110, 35)";
+            // email.style.border = "1px solid rgb(246, 110, 35)";
             email_error.innerHTML = "";
         }
        }
 
     function validatePassword(){
         if(password.value === ""){
-            password.style.border = "2px solid red";
+            // password.style.border = "2px solid red";
             password_error.innerHTML = "<i class='bi bi-exclamation-circle-fill'></i> Please provide password.";
         } else if(password.value.length < 4 || password.value.length > 8 ){
             validatePasswordLength();
         }   else {
-            password.style.border = "1px solid rgb(246, 110, 35)";
+            // password.style.border = "1px solid rgb(246, 110, 35)";
             password_error.innerHTML = "";
         }
     }
 
     function validatePasswordLength() {
         if (password.value.length < 4 ){
-            password.style.border = "2px solid red";
+            // password.style.border = "2px solid red";
             password_error.innerHTML = "<i class='bi bi-exclamation-circle-fill'></i> Password must be more than 3 characters.";
         } else if (password.value.length > 8){
-            password.style.border = "2px solid red";
+            // password.style.border = "2px solid red";
             password_error.innerHTML = "<i class='bi bi-exclamation-circle-fill'></i> Password must not be more than 8 characters.";
         } else {
-            password.style.border = "1px solid rgb(246, 110, 35)";
+            // password.style.border = "1px solid rgb(246, 110, 35)";
             password_error.innerHTML = "";
         }
     }
     </script>
-    </body>
+</body>
+
 </html>

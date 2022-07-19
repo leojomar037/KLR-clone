@@ -42,10 +42,13 @@
                                     <p class = "success alert alert-success" ><i class="bi bi-check-circle-fill"></i> <?php echo $_GET['success']; ?></p>    
                             <?php }?>
 
+                  
+
                             <!--First Name-->
-                            <label class="form-label" for="first_name">First name<span class="text-danger">*</span></label>
+                            <!-- <label class="form-label" for="first_name">First name<span class="text-danger">*</span></label> -->
                             <?php if(isset($_GET['first_name'])) {?>
                             <input 
+                            placeholder="First Name"
                                 type="text" 
                                 id="first_name" 
                                 name="first_name" 
@@ -57,6 +60,7 @@
                             <?php }else{?>
                                 <input 
                                 type="text" 
+                                placeholder="First Name"
                                 id="first_name" 
                                 name="first_name" 
                                 class="form-control input-form w-80" 
@@ -68,7 +72,7 @@
 
                         <!--Last Name-->
                         <div class="form-outline mb-3">
-                            <label class="form-label" for="last_name">Last name<span class="text-danger">*</span></label>
+                            <!-- <label class="form-label" for="last_name">Last name<span class="text-danger">*</span></label> -->
                             <?php if(isset($_GET['last_name'])) {?>
                                 <input 
                                 type="text" 
@@ -83,6 +87,7 @@
                             <input 
                                 type="text" 
                                 name="last_name" 
+                                placeholder="Last Name"
                                 id="last_name" 
                                 class="form-control input-form" 
                                 autocomplete="off" 
@@ -93,7 +98,7 @@
 
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="email">Email address<span class="text-danger">*</span></label>
+                            <!-- <label class="form-label" for="email">Email address<span class="text-danger">*</span></label> -->
                             <?php if (isset($_GET['email'])) { ?>
                             <input 
                                 type="email" 
@@ -108,6 +113,7 @@
                                 <input 
                                 type="email" 
                                 name="email" 
+                                placeholder="Email"
                                 id="email" 
                                 class="form-control input-form" 
                                 autocomplete="off" 
@@ -120,11 +126,12 @@
 
                         <!-- Password input -->
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="password">Password<span class="text-danger">*</span></span></label>
+                            <!-- <label class="form-label" for="password">Password<span class="text-danger">*</span></span></label> -->
                             <input 
                                 type="password" 
                                 name="password" 
                                 id="password" 
+                                placeholder="Password"
                                 oninput="validatePasswordLength()" 
                                 onblur="validatePassword()" 
                                 class="form-control input-form" 
@@ -134,11 +141,12 @@
 
                         <!-- Confirm Password input -->
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="confirm_password">Confirm Password<span class="text-danger">*</span></label>
+                            <!-- <label class="form-label" for="confirm_password">Confirm Password<span class="text-danger">*</span></label> -->
                             <input 
                                 type="password" 
                                 name="confirm_password" 
                                 id="confirm_password" 
+                                placeholder="Confirm Password"
                                 class="form-control input-form" 
                                 onblur="validateconfirmPassword()" 
                                 oninput="matchPassword()"/>
@@ -246,7 +254,6 @@
                             <input type="submit" name="create" value="Sign Up" class="btn btn-signup w-50"  >
                             <!-- <input type="submit" onclick="validateEntries()" value="Sign Up" class="btn btn-signup w-50"  > -->
                         </div>
-
                     </form>
                 </div>
             </div>
@@ -254,6 +261,7 @@
     </div>
   </div>
 </section>
+
 <!-- Section: Design Block -->
 
 <script src="./js/users.js"></script>
