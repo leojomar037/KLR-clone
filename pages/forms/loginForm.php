@@ -1,12 +1,5 @@
 <form action="./login.php" class="sign-in-form" method="post">
-                    <?php
-                    if (isset($_GET['error'])){?>
-                        <p class = "error alert alert-danger" ><i class='bi bi-exclamation-circle-fill'></i> <?php echo $_GET['error']; ?></p>    
-                    <?php }?>
-                        <?php
-                    if (isset($_GET['success'])){?>
-                        <p class = "success alert alert-success" ><i class="bi bi-check-circle-fill"></i> <?php echo $_GET['success']; ?></p>    
-                        <?php }?>
+                    
                     
                         <div class="logo">
                             <img src="Images/sign-in.jpg" alt="">
@@ -18,17 +11,27 @@
                             <a class="toggle">Sign up</a>
                         </div>
 
+                        <!--server side validation display-->
+                        <?php
+                        if (isset($_GET['error'])){?>
+                            <p class = "error alert alert-danger" ><i class='bi bi-exclamation-circle-fill'></i> <?php echo $_GET['error']; ?></p>    
+                        <?php }?>
+                            <?php
+                        if (isset($_GET['success'])){?>
+                            <p class = "success alert alert-success" ><i class="bi bi-check-circle-fill"></i> <?php echo $_GET['success']; ?></p>    
+                            <?php }?>
+
                         <div class="actual-form">
                             <div class="input-wrap">   
-                                <input type="text" minlength="4" name="email" id="email"  class="input-field" autocomplete="off" onblur="validateEmail()" required>
+                                <input type="text" name="logemail" id="logemail"  class="input-field" autocomplete="off" onblur="validateLogEmail()">
                                 <label>Email</label>
-                                <div class="error" id="email_error"></div>
+                                <div class="error" id="logemail_error"></div>
                             </div>
                         
                             <div class="input-wrap">
-                                <input type="password"  name="password" id="password"  class="input-field" autocomplete="off" oninput="validatePasswordLength()"  onblur="validatePassword()" required>
+                                <input type="password"  name="logpassword" id="logpassword"  class="input-field" autocomplete="off" oninput="validateLogPasswordLength()"  onblur="validateLogPassword()" >
                                 <label>Password</label>
-                                <div class="error" id="password_error"></div>
+                                <div class="error" id="logpassword_error"></div>
                             </div>
                             <input type="submit" name="login"   value="Login" class="sign-btn">
 

@@ -3,14 +3,11 @@
     session_start();
 
     if(isset($_POST['login'])){
-        $email = trim($_POST['email']);
-        $password = trim($_POST['password']);
-
-    
+        $email = trim($_POST['logemail']);
+        $password = trim($_POST['logpassword']);
 
         if (empty($email) || empty($password)){
-            echo "<script>alert('Please fill up the email and password')</script>";
-            // header("Location: login.php?error=Please fill up the email and/or password");
+            header("Location: ./login.php?error=Please fill up the email and/or password.");
         } else {
             $check_query = "SELECT * FROM users WHERE email = '$email'";
             $query_match = mysqli_query($connection, $check_query) OR
@@ -22,7 +19,7 @@
             $current_email = $mysql_array['email'];
 
             if(mysqli_num_rows($query_match) == 0){
-                echo "<script>alert('No records found. Sign up instead.')</script>";
+                header("Location: ./login.php?error=No records found. Sign up instead.");
                 echo "<script>window.location.href = './login.php'</script>";
             }
             elseif (($password=== $current_password) || (mysqli_num_rows($query_match) > 0 && password_verify($password, $current_password))) {
@@ -36,7 +33,7 @@
                 echo "<script>alert('Successful')</script>";
             }
              else {
-                echo "<script>alert('Log in failed! Wrong password!')</script>";
+                header("Location: ./login.php?error=Login failed. Wrong password.");
                 echo "<script>window.location.href = './login.php'</script>";
             }
         }

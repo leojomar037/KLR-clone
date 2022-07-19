@@ -1,5 +1,10 @@
 
-<?php require('./inc/login.php')?>
+<?php 
+
+// require('./inc/login.php');
+require('./inc/create.php');
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,10 +13,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome!</title>
     <!-- <link rel="stylesheet" href="style-2.css"> -->
     <link rel="stylesheet" href="css/sign-in.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body>
@@ -56,53 +63,13 @@
 
 
     <!-- Javascript -->
+    <script src="js/login.js"></script>
+    <script src="js/registration.js"></script>
     <script src="js/app.js"></script>
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script>
-        const regRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-        let email = document.getElementById("email");
-        let email_error = document.getElementById("email_error");
-        let password = document.getElementById("password");
-        let password_error = document.getElementById("password_error");
-
-        function validateEmail(){
-        if(email.value === ""){
-            // email.style.border = "1px solid red";
-            email_error.innerHTML = "<i class='bi bi-exclamation-circle-fill'></i> Please provide email.";
-        } else if(!regRegex.test(email.value)){
-            // email.style.border = "1px solid red";
-            email_error.innerHTML = "<i class='bi bi-exclamation-circle-fill' ></i> Invalid email format."
-        } else {
-            // email.style.border = "1px solid rgb(246, 110, 35)";
-            email_error.innerHTML = "";
-        }
-       }
-
-    function validatePassword(){
-        if(password.value === ""){
-            // password.style.border = "2px solid red";
-            password_error.innerHTML = "<i class='bi bi-exclamation-circle-fill'></i> Please provide password.";
-        } else if(password.value.length < 4 || password.value.length > 8 ){
-            validatePasswordLength();
-        }   else {
-            // password.style.border = "1px solid rgb(246, 110, 35)";
-            password_error.innerHTML = "";
-        }
-    }
-
-    function validatePasswordLength() {
-        if (password.value.length < 4 ){
-            // password.style.border = "2px solid red";
-            password_error.innerHTML = "<i class='bi bi-exclamation-circle-fill'></i> Password must be more than 3 characters.";
-        } else if (password.value.length > 8){
-            // password.style.border = "2px solid red";
-            password_error.innerHTML = "<i class='bi bi-exclamation-circle-fill'></i> Password must not be more than 8 characters.";
-        } else {
-            // password.style.border = "1px solid rgb(246, 110, 35)";
-            password_error.innerHTML = "";
-        }
-    }
+<script>
+  
     </script>
 </body>
 
