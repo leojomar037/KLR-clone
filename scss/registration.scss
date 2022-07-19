@@ -1,0 +1,57 @@
+.richae{
+    .card-container{
+    border: 1px solid rgb(246, 110, 35);
+}
+
+
+.bg-glass {
+  background-color: hsla(0, 0%, 100%, 0.9) !important;
+  backdrop-filter: saturate(200%) blur(25px);
+}
+
+
+.btn-signup,
+.btn-login, #btn-login{
+    background-color: rgb(246, 110, 35) !important;
+    border: none;
+    color: white !important;
+}
+
+.btn-signup:hover,
+.btn-signup:focus,
+.btn-login:hover, 
+.btn-login:focus{
+    border: 1px solid rgb(246, 110, 35) !important;
+    color: rgb(246, 110, 35) !important;
+    background-color: white !important;
+}
+
+.error_input{
+    border: 2px solid red;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f093fb;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: -webkit-linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1)); */
+    background: -webkit-linear-gradient(to bottom right, rgba(246, 110, 35, 1), rgba(77, 64, 204, 1));
+
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background: linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1)) */
+    background: linear-gradient(to bottom right, rgba(246, 110, 35, 1), rgba(77, 64, 204, 1))
+    }
+    
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+
+}

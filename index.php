@@ -31,7 +31,7 @@
                             <a href="login.php" class="btn btn-log"  id="btn-login" >Log In</a>
                         </li>
                         <li>
-                            <a href="login.php" class="btn btn-sign">Sign Up</a>
+                            <a href="registration.php" class="btn btn-sign">Sign Up</a>
                         </li>
                     </ul>
                 </nav>
