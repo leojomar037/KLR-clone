@@ -1,5 +1,10 @@
-<?php require('./inc/retrieve.php')?>
-
+<?php require('./inc/retrieve.php'); ?>
+        <nav class="sidebar">
+                <div class="profile">
+                    <button class="btn ">
+                        <i class="bi bi-list"></i>
+                    </button>
+    
             <h2>Welcome</h2>
             <h3><?php echo $_SESSION['first_name'] ?></h3>
         </div>
@@ -31,6 +36,8 @@
             <i class="bi bi-app-indicator"></i>
             <span class="title">Subjects</span>
         </a>
+
+
         <a class="list  sign_out" id="list" href="inc/logout.php">
             <i class="bi bi-box-arrow-right"></i>
             <span class="title">Sign-out</span>

@@ -21,7 +21,7 @@
 <!--check role-->
 <?php
     if( $_SESSION['role']==1){
-        require('./pages/admin/main3.php');
+        require('./pages/admin/main.php');
     }
     elseif( $_SESSION['role']==2){
         require('./pages/students/main.php');
