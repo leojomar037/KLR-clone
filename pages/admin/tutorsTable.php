@@ -1,7 +1,7 @@
 <?php require('./inc/retrieve.php')?>
 
 <div class="container">
-<h2>List of Students</h2>
+<h2>List of Tutors</h2>
 
     <div class="card">
         <table class="table table-striped">
@@ -15,20 +15,32 @@
                 </tr>
             </thead>
             <tbody>
-                <?php while ($tutor = mysqli_fetch_array($sql_get_tutors)){?>
+                <?php 
+                    if($tutorsCount != 0){
+                        while ($row = mysqli_fetch_array($sql_get_tutors)){
+                ?>
                     <tr>
-                        <td><?php echo $tutor['first_name'] ?></td>
-                        <td><?php echo $tutor['last_name'] ?></td>
-                        <td><?php echo $tutor['email'] ?></td>
-                        <td><?php echo $tutor['mobile_number'] ?></td>
+                        <td><?php echo $row['first_name'] ?></td>
+                        <td><?php echo $row['last_name'] ?></td>
+                        <td><?php echo $row['email'] ?></td>
+                        <td><?php echo $row['mobile_number'] ?></td>
                         <td>
-                            <form action="">
-                                <button class="btn btn-danger">Delete</button>
-                                <button class="btn btn-success">View</button>
+                            <form action="./inc/update.php" method="post">
+                                <input type="hidden" name="id" id="id" value="<?php echo $row['user_id'] ?>">
+                                <input type="submit" class="btn btn-success" value="View" name="update">
+                                <input type="submit" class="btn btn-danger" value="Delete" name="delete" onclick="return confirm('Are you sure you want to delete this record?')">
                             </form>
                         </td>
                     </tr>
-                <?php } ?>
+                <?php 
+                        }
+                    }
+                    else{
+                ?>
+                    <td class="bg-danger" colspan="5" style="text-align: center;">No Record Found</td>
+                <?php
+                    }
+                ?>
             </tbody>
         </table>
     </div>

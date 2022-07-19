@@ -6,7 +6,7 @@
             </button>
 
             <h2>Welcome</h2>
-            <h3>ADMIN</h3>
+            <h3><?php echo $_SESSION['first_name'] ?></h3>
         </div>
         <a class="list" id="list" href="#dashboard">
             <i class="bi bi-book"></i>
@@ -24,13 +24,17 @@
             <i class="bi bi-person-fill"></i>
             <span class="title">Tutors</span>
         </a>
-        <a class="list" id="list" href="#tutors">
+        <a class="list" id="list" href="#transaction_history">
             <i class="bi bi-clock-history"></i>
             <span class="title">Transaction History</span>
         </a>
-        <a class="list" id="list" href="#tutors">
+        <a class="list" id="list" href="#programs">
             <i class="bi bi-app-indicator"></i>
             <span class="title">Programs</span>
+        </a>
+        <a class="list" id="list" href="#subjects">
+            <i class="bi bi-app-indicator"></i>
+            <span class="title">Subjects</span>
         </a>
         <a class="list  sign_out" id="list" href="inc/logout.php">
             <i class="bi bi-box-arrow-right"></i>
@@ -53,10 +57,13 @@
             <?php require('./pages/admin/tutorsTable.php')?>
         </div>
         <div class="section transaction_history" id="transaction_history">
-            
+            <?php require('./pages/admin/transactionHistory.php')?>
         </div>
         <div class="section programs" id="programs">
-            
+            <?php require('./pages/admin/programsTable.php') ?>
+        </div>
+        <div class="section subjects" id="subjects">
+            <?php require('./pages/admin/subjectsTable.php') ?>
         </div>
     </main>
 </body>

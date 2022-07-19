@@ -1,5 +1,6 @@
 <?php 
     require("../connection/database.php");
+    
     // const EMAIL_EXISTS = "Email already exists. Sign in instead.";
 
 if(isset($_POST['create'])){

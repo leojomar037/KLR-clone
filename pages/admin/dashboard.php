@@ -22,7 +22,7 @@
                 <img src="" alt="">
             </div>
             <div class="info">
-                <h4><?php echo $studentsCount ?></h4>
+                <h4><?php echo $programsCount ?></h4>
                 <h5>Students</h5>
                 <a href="">View More <i class="bi bi-arrow-right"></i></a>
             </div>    

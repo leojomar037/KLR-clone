@@ -1,4 +1,4 @@
-.students,.tutors{
+.students,.tutors,.programs,.subjects{
     font-size: 1rem;
     .container{
         h2{
@@ -6,13 +6,38 @@
         }
         .card{
             width: auto;
-            padding: 1rem;
+            max-height: 85vh;
+            padding: 0rem ;
+            overflow-x: scroll;
+            overflow-y: scroll;
 
-            table{
-                th{
-                    background-color: #4D40CC;
-                    color: white;
+            table{ 
+                
+                text-align: center;
+                thead{
+                    position: sticky;
+                    top: 0;
+
+                    th{
+                        background-color: #4D40CC;
+                        color: white;
+                    }
                 }
+               
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 750px) {
+
+    .students,.tutors,.programs,.subjects{
+        .container{
+          
+            .card{
+                overflow: hidden;
+                overflow-y: scroll;
             }
         }
     }

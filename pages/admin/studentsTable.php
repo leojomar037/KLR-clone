@@ -15,20 +15,32 @@
                 </tr>
             </thead>
             <tbody>
-                <?php while ($student = mysqli_fetch_array($sql_get_students)){?>
+                <?php 
+                    if($studentsCount != 0){
+                        while ($row = mysqli_fetch_array($sql_get_students)){
+                ?>
                     <tr>
-                        <td><?php echo $student['first_name'] ?></td>
-                        <td><?php echo $student['last_name'] ?></td>
-                        <td><?php echo $student['email'] ?></td>
-                        <td><?php echo $student['mobile_number'] ?></td>
+                        <td><?php echo $row['first_name'] ?></td>
+                        <td><?php echo $row['last_name'] ?></td>
+                        <td><?php echo $row['email'] ?></td>
+                        <td><?php echo $row['mobile_number'] ?></td>
                         <td>
-                            <form action="">
-                                <button class="btn btn-danger">Delete</button>
-                                <button class="btn btn-success">View</button>
+                            <form action="./inc/update.php" method="post">
+                                <input type="hidden" name="id" id="id" value="<?php echo $row['user_id'] ?>">
+                                <input type="submit" class="btn btn-success" value="View" name="update">
+                                <input type="submit" class="btn btn-danger" value="Delete" name="delete" onclick="return confirm('Are you sure you want to delete this record?')">
                             </form>
                         </td>
                     </tr>
-                <?php } ?>
+                <?php 
+                        }
+                    }
+                    else{
+                ?>
+                    <td class="bg-danger" colspan="5" style="text-align: center;">No Record Found</td>
+                <?php
+                    }
+                ?>
             </tbody>
         </table>
     </div>

@@ -7,7 +7,7 @@
                 <i class="bi bi-list"></i>
             </button>
             <h2>Welcome</h2>
-            <h3>USER</h3>
+            <h3><?php echo $_SESSION['first_name'] ?></h3>
         </div>
         <a class="list" href="#dashboard">
             <i class="bi bi-book"></i>
@@ -50,7 +50,7 @@
         </a>
     </nav>
     <main>
-    <div class="bg_image"></div>
+    
 
 
     </main>

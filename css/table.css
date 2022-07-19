@@ -1,17 +1,37 @@
-.students, .tutors {
+.students, .tutors, .programs, .subjects {
   font-size: 1rem;
 }
 
-.students .container h2, .tutors .container h2 {
+.students .container h2, .tutors .container h2, .programs .container h2, .subjects .container h2 {
   text-align: center;
 }
 
-.students .container .card, .tutors .container .card {
+.students .container .card, .tutors .container .card, .programs .container .card, .subjects .container .card {
   width: auto;
-  padding: 1rem;
+  max-height: 85vh;
+  padding: 0rem;
+  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
-.students .container .card table th, .tutors .container .card table th {
+.students .container .card table, .tutors .container .card table, .programs .container .card table, .subjects .container .card table {
+  text-align: center;
+}
+
+.students .container .card table thead, .tutors .container .card table thead, .programs .container .card table thead, .subjects .container .card table thead {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.students .container .card table thead th, .tutors .container .card table thead th, .programs .container .card table thead th, .subjects .container .card table thead th {
   background-color: #4D40CC;
   color: white;
+}
+
+@media screen and (min-width: 750px) {
+  .students .container .card, .tutors .container .card, .programs .container .card, .subjects .container .card {
+    overflow: hidden;
+    overflow-y: scroll;
+  }
 }

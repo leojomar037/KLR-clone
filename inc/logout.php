@@ -1,6 +1,5 @@
 <?php 
     
-    // require("../connection/database.php");
         $_SESSION['status'] = 'invalid';
         unset($_SESSION['email']);
         unset($_SESSION['role']);

@@ -26,17 +26,13 @@
                 echo "<script>alert('No records found. Sign up instead.')</script>";
                 echo "<script>window.location.href = './login.php'</script>";
             }
-            elseif (($password=== $current_password)) {
+            elseif (($password=== $current_password) || (mysqli_num_rows($query_match) > 0 && password_verify($password, $current_password))) {
                 $_SESSION['status'] = 'valid';
                 $_SESSION['email'] = $mysql_array['email'];
                 $_SESSION['role'] = $mysql_array['role'];
-                echo "<script>window.location.href = './home.php'</script>";
-                echo "<script>alert('Successful')</script>";
-            }
-            elseif (mysqli_num_rows($query_match) > 0 && password_verify($password, $current_password)) {
-                $_SESSION['status'] = 'valid';
-                $_SESSION['email'] = $mysql_array['email'];
-                $_SESSION['role'] = $mysql_array['role'];
+                $_SESSION['first_name'] = $mysql_array['first_name'];
+                $_SESSION['password'] = $mysql_array['password'];
+                $_SESSION['user_id'] = $mysql_array['user_id'];
                 echo "<script>window.location.href = './home.php'</script>";
                 echo "<script>alert('Successful')</script>";
             }
