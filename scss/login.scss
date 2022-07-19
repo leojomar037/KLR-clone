@@ -1,37 +1,31 @@
 .d-grid{
     .card-container,
-.input-form {
-  border: 1px solid #f66e23;
-  outline: none !important;
-}
+    .input-form {
+      border: 1px solid #f66e23;
+      outline: none !important;
+    }
 
-.bg-glass {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  -webkit-backdrop-filter: saturate(200%) blur(25px);
-          backdrop-filter: saturate(200%) blur(25px);
-}
+    .bg-glass {
+      background-color: rgba(255, 255, 255, 0.9) !important;
+      -webkit-backdrop-filter: saturate(200%) blur(25px);
+              backdrop-filter: saturate(200%) blur(25px);
+    }
 
-.btn-signup,
-.btn-login, #btn-login {
-  background-color: #f66e23 !important;
-  border: none;
-  color: white !important;
-}
+    .btn-signup,
+    .btn-login, #btn-login {
+      background-color: #f66e23 !important;
+      border: none;
+      color: white !important;
+    }
 
-.btn-signup:hover,
-.btn-signup:focus,
-.btn-login:hover,
-.btn-login:focus {
-  border: 1px solid #f66e23 !important;
-  background-color: white !important;
-  color: #f66e23 !important;
-}
+    .btn-signup:hover,
+    .btn-signup:focus,
+    .btn-login:hover,
+    .btn-login:focus {
+      border: 1px solid #f66e23 !important;
+      background-color: white !important;
+      color: #f66e23 !important;
+    }
 
-
-/* .modal{
-  z-index: 99999999999999;
-  background-color: red;
-  padding: 50vh;
-} */
 
 }

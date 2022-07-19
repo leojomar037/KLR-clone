@@ -110,7 +110,8 @@ form.sign-up-form {
 }
 
 .toggle:hover {
-    color: #4D40CC
+    color: #4D40CC;
+    cursor: pointer;
 }
 
 .actual-form {
@@ -206,6 +207,7 @@ label {
 
 .text a:hover {
     color: #4D40CC;
+    cursor: pointer;
 }
 
 main.sign-up-mode form.sign-in-form {

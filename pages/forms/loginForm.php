@@ -34,7 +34,7 @@
 
                             <p class="text">
                                 Forgotten your password or you login details ?
-                                <a href="">Get Help</a> Signing in
+                                <a>Get Help</a> Signing in
                             </p>
                         </div>
 
