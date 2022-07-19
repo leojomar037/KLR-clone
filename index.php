@@ -58,20 +58,6 @@
             <div class="showcase-form card ">
 
                 <img src="images/main-img.avif " alt=" ">
-                <!-- <h2>Request a Demo</h2>
-                <form>
-                    <div class="form-control ">
-                        <input type="text " name="name " placeholder="Name " required>
-                    </div>
-                    <div class="form-control ">
-                        <input type="text " name="company " placeholder="Company Name " required>
-                    </div>
-                    <div class="form-control ">
-                        <input type="text " name="email " placeholder="Email " required>
-                    </div>
-
-                    <input type="submit " value="Send " class="btn btn-primary ">
-                </form> -->
             </div>
         </div>
     </section>

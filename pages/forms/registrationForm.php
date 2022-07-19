@@ -6,7 +6,7 @@
                         <div class="heading">
                             <h2>Get Started</h2>
                             <h6>Already have an account ?</h6>
-                            <a href="#" class="toggle">Sign in</a>
+                            <a class="toggle">Sign in</a>
                         </div>
                         <?php
                                 if (isset($_GET['errorReg'])){?>
@@ -27,7 +27,6 @@
                                             name="first_name" 
                                             class="input-field" 
                                             autocomplete="off" 
-                                            value = "<?php echo $_GET['first_name'];?>"
                                             onblur="validateFirstName()" />
 
                                     <label>First Name</label>
@@ -42,7 +41,6 @@
                                             name="last_name" 
                                             class="input-field" 
                                             autocomplete="off" 
-                                            value = "<?php echo $_GET['last_name'];?>"
                                             onblur="validateLastName()" />
                                     <label>Last Name</label>
                                     <div class="error" id="last_name_error"></div>
@@ -57,7 +55,6 @@
                                                 name="regemail" 
                                                 class="input-field" 
                                                 autocomplete="off" 
-                                                value = "<?php echo $_GET['regemail'];?>"
                                                 onblur="validateRegEmail()" />
                                         <label>Email</label>
                                         <div class="error" id="regemail_error"></div>

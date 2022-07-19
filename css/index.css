@@ -2,49 +2,10 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
-.index {
-  /* NAVBAR */
-  /* Showcase */
-  /* Programm */
-  /* .content p {
-    text-align: center;
-    color: #b2bec3;
-    padding-top: 0 8px;
-} */
-  /* ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 0;
-} */
-  /* li {
-    padding-top: 5px;
-} */
-  /* @media(max-width:1000px) {
-    .content {
-        width: 45%;
-    }
-}
-
-@media(max-width:750px) {
-    .content {
-        width: 100%px;
-    }
-} */
-  /* Stats */
-  /* CLouse */
-  /* Slider */
-  /* reviews */
-  /* Footer */
-  /* Animation */
-  /* Tablets */
-}
 
 .index .con-logo {
   margin-top: 22px;
