@@ -10,7 +10,6 @@
             <div class="logo-image">
                 <img src="images/sign-in.jpg" alt=" ">
             </div>
-            <?php echo $_SESSION['user_id'] ?>
             <span class="logo_name ">KLR </span>
 
             <i class="fa-solid fa-bars sidebar-toggle"></i>
