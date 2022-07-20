@@ -1,6 +1,8 @@
 <?php 
     session_start();
-    if($_SESSION['status']=='invalid'|| empty($_SESSION['status'])){
-        require('./inc/logout.php');
+
+    if(empty($_SESSION['status']) ||session_status() === PHP_SESSION_NONE || $_SESSION['status'] == 'invalid'){
+        require('./logout.php');
     }
+   
 ?>

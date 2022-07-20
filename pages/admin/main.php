@@ -1,56 +1,77 @@
-<?php require('./inc/retrieve.php'); ?>
-        <nav class="sidebar">
-                <div class="profile">
-                    <button class="btn ">
-                        <i class="bi bi-list"></i>
-                    </button>
+<?php require('./inc/retrieve.php');?>
+
+
+<link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+
+<body >
     
-            <h2>Welcome</h2>
-            <h3><?php echo $_SESSION['first_name'] ?></h3>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="images/sign-in.jpg" alt=" ">
+            </div>
+            <?php echo $_SESSION['user_id'] ?>
+            <span class="logo_name ">KLR </span>
+
+            <i class="fa-solid fa-bars sidebar-toggle"></i>
         </div>
-        <a class="list" id="list" href="#dashboard">
-            <i class="bi bi-book"></i>
-            <span class="title">Dashboard</span>
-        </a>
-        <a class="list" id="list" href="#profile">
-            <i class="bi bi-person-circle"></i>
-            <span class="title">Profile</span>
-        </a>
-        <a class="list" id="list" href="#students">
-            <i class="bi bi-people-fill"></i>
-            <span class="title">Students</span>
-        </a>
-        <a class="list" id="list" href="#tutors">
-            <i class="bi bi-person-fill"></i>
-            <span class="title">Tutors</span>
-        </a>
-        <a class="list" id="list" href="#transaction_history">
-            <i class="bi bi-clock-history"></i>
-            <span class="title">Transaction History</span>
-        </a>
-        <a class="list" id="list" href="#programs">
-            <i class="bi bi-app-indicator"></i>
-            <span class="title">Programs</span>
-        </a>
-        <a class="list" id="list" href="#subjects">
-            <i class="bi bi-app-indicator"></i>
-            <span class="title">Subjects</span>
-        </a>
+        <div class="menu-items">
+            <div>
+                <li class="links-hover">
+                    <a href="#dashboard">
+                        <i class="fa-solid fa-house-user"></i>
+                        <span class="link-name ">Dashboard</span>
+                    </a>
+                </li>
+                <li class="links-hover">
+                    <a href="#profile">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="link-name ">Profile</span>
+                    </a>
+                </li>
+                <li class="links-hover">
+                    <a href=" #students">
+                        <i class="fa-solid fa-users"></i>
+                        <span class="link-name ">Students</span>
+                    </a>
+                </li>
+                <li class="links-hover">
+                    <a href=" #">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <span class="link-name ">Tutors</span>
+                    </a>
+                </li>
+                <li class="links-hover">
+                    <a href=" #">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span class="link-name ">History</span>
+                    </a>
+                </li>
+                <li class="links-hover">
+                    <a href=" #">
+                        <i class="fa-solid fa-sheet-plastic"></i>
+                        <span class="link-name ">Programs</span>
+                    </a>
+                </li>
+                </div>
 
-
-        <a class="list  sign_out" id="list" href="inc/logout.php">
-            <i class="bi bi-box-arrow-right"></i>
-            <span class="title">Sign-out</span>
-        </a>
+                <div>
+                    <li class="logout-mode">
+                        <a href="logout.php">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <span class="link-name">Logout</span>
+                        </a>
+                    </li>
+                </div>
+        </div>
     </nav>
 
-    </nav>
-    
     <main> 
         <div class="section dashboard" id="dashboard">
             <?php require('./pages/admin/dashboard.php')?>
         </div>
         <div class="section profile" id="profile">
+            <?php require('./editProfile.php')?>
             
         </div>
         <div class="section students" id="students">
@@ -60,13 +81,10 @@
             <?php require('./pages/admin/tutorsTable.php')?>
         </div>
         <div class="section transaction_history" id="transaction_history">
-            <?php require('./pages/admin/transactionHistory.php')?>
+            
         </div>
         <div class="section programs" id="programs">
-            <?php require('./pages/admin/programsTable.php') ?>
-        </div>
-        <div class="section subjects" id="subjects">
-            <?php require('./pages/admin/subjectsTable.php') ?>
+            
         </div>
     </main>
 
@@ -75,4 +93,3 @@
 
 </body>
 
-</html>

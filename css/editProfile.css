@@ -1,0 +1,206 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5vh;
+}
+
+.editProfile {
+  width: 100%;
+  min-height: 80vh;
+  overflow: hidden;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.editProfile .box {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  height: 95vh;
+  border: 0.1rem #f66e23 solid;
+  background-color: #fff;
+  border-radius: 3.3rem;
+  -webkit-box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+          box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+}
+
+.editProfile .box .inner-box {
+  position: absolute;
+  width: calc(100% - 4.1rem);
+  height: calc(100% - 4.1rem);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.editProfile .box .inner-box .forms-wrap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -webkit-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form {
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form .heading {
+  width: 12rem;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1rem;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form .heading:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  border-bottom: .3rem solid #4D40CC;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form .heading h2 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: #151111;
+  margin-top: 1rem;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form .actual-form {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form .actual-form .sign-btn {
+  display: inline-block;
+  width: 40%;
+  height: 3rem;
+  background-color: #4D40CC;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form .actual-form .sign-btn:hover {
+  background-color: #151111;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form .actual-form .input-wrap {
+  position: relative;
+  height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form .actual-form .input-wrap .input-field {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: .1rem solid #bbb;
+  padding: 0;
+  font-size: 0.95rem;
+  color: #151111;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form .actual-form .input-wrap .input-field.active {
+  border-bottom-color: #151111;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form .actual-form .input-wrap .input-field.active + label {
+  font-size: 0.75rem;
+  top: -.2rem;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form .actual-form .input-wrap label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 0.95rem;
+  color: #bbb;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form .actual-form .input-wrap .error {
+  position: absolute;
+  color: red;
+  bottom: -2rem;
+  font-size: .7rem;
+  margin: 0;
+  padding: 0;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form .actual-form .input-wrap .error i {
+  font-size: inherit;
+}
+
+.editProfile .box .inner-box .forms-wrap .sign-in-form .actual-form .bday label {
+  position: absolute;
+  left: 0;
+  top: 3%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: #bbb;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+@media (max-width: 890px) {
+  .editProfile .box {
+    overflow-y: scroll;
+    border-radius: .5rem;
+  }
+  .actual-form {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}

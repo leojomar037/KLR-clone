@@ -1,3 +1,4 @@
+<?php require('./inc/indexSession.php')?>
 
 <!DOCTYPE html>
 <html lang="en">

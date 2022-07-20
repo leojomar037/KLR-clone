@@ -25,7 +25,7 @@
                         <td><?php echo $row['email'] ?></td>
                         <td><?php echo $row['mobile_number'] ?></td>
                         <td>
-                            <form action="./inc/update.php" method="post">
+                            <form action="./inc/delete.php" method="post">
                                 <input type="hidden" name="id" id="id" value="<?php echo $row['user_id'] ?>">
                                 <input type="submit" class="btn btn-success" value="View" name="update">
                                 <input type="submit" class="btn btn-danger" value="Delete" name="delete" onclick="return confirm('Are you sure you want to delete this record?')">

@@ -1,3 +1,7 @@
+<?php 
+    require('./inc/edit.php') 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,24 +11,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile</title>
     <!-- <link rel="stylesheet" href="style-2.css"> -->
-    <link rel="stylesheet" href="css/edit2.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
+<link rel="stylesheet" href="css/editProfile.css?v=<?php echo time(); ?>">
 
 <body>
-    <main>
+    <main class="editProfile">
         <div class="box">
             <div class="inner-box">
                 <div class="forms-wrap">
-                    <form action="./inc/edit.php" class="sign-in-form" method="post" autocomplete="off">
+                    <form action="./inc/update.php" class="sign-in-form" method="post" autocomplete="off">
                         <div class="heading">
                             <h2>Edit Profile</h2>
                         </div>
 
                         <div class="actual-form">
                             <div>
+
+                                <input type="hidden" name="user_id" id="user_id" value="<?php echo $row['user_id'] ?>">
                                 <!--First Name-->
                                 <div class="input-wrap">
                                     <input 
@@ -34,7 +40,8 @@
                                         class="input-field" 
                                         autocomplete="off" 
                                         onblur="validateFirstName()"
-                                        autocomplete="off">
+                                        autocomplete="off"
+                                        value="<?php echo $row['first_name'] ?>">
                                     <label>First Name<span class="text-danger">*</span></label>
                                     <div class="error" id="first_name_error"></div>
                                 </div>
@@ -62,11 +69,11 @@
                                             class="input-field" 
                                             autocomplete="off" 
                                             onblur="validateRegEmail()" />
-                                        <!-- <label>Email</label> -->
+                                        <label>Email<span class="text-danger">*</span></label>
                                         <div class="error" id="regemail_error"></div>
                                 </div>
 
-                                <!--Password-->
+                                <!--Password
                                 <div class="input-wrap">
                                     <input 
                                         type="password" 
@@ -79,7 +86,7 @@
                                     <label>Password</label>
                                     <div class="error" id="regpassword_error"></div>
                                 </div>
-
+                                -->
                                 <!--Gender-->
                                 <div class="input-wrap">
                                     <select name="gender" class="input-field" id="gender">
@@ -315,7 +322,7 @@
 
                                 <!--Complete Address-->
                                 <div class="input-wrap">
-                                    <input type="text" name="address" id="address" class="input-field" autocomplete="off" />
+                                    <input type="text" name="address" id="address" class="input-field" autocomplete="off" value="<?php echo $row['address'] ?>"/>
                                     <label class="form-label" for="address">Address</label>
                                 </div>
 
@@ -406,6 +413,12 @@
             } else
                 x.setAttribute("hidden","hidden");
         }
+
+
+
+
+
+
 
     </script>
 </body>

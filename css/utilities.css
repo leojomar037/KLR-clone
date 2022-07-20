@@ -1,241 +1,223 @@
-.index {
-  /* Margin */
-  /* Padding */
-  /* text sizes */
-}
-
 .index .container {
-  max-width: 100vw;
-  /* background-color: red; */
-  margin: auto;
-  overflow: auto;
-  padding: 0 4rem;
+    max-width: 100vw;
+    margin: auto;
+    overflow: auto;
+    padding: 0 4rem;
 }
 
 .index .container-nav {
-  max-width: 100vw;
-  margin: auto;
-  padding: 0 4rem;
+    max-width: 100vw;
+    margin: auto;
+    padding: 0 4rem;
 }
 
 .index .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
 }
 
 .index .grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .index .grid-3 {
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .index .grid-4 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    gap: 2rem;
 }
 
 .index .my-1 {
-  margin: 1rem 0;
+    margin: 1rem 0;
 }
 
 .index .my-2 {
-  margin: 1.5rem 0;
+    margin: 1.5rem 0;
 }
 
 .index .my-3 {
-  margin: 2rem 0;
+    margin: 2rem 0;
 }
 
 .index .my-4 {
-  margin: 3rem 0;
+    margin: 3rem 0;
 }
 
 .index .my-5 {
-  margin: 4rem 0;
+    margin: 4rem 0;
 }
 
 .index .m-1 {
-  margin: 1rem;
+    margin: 1rem;
 }
 
 .index .m-2 {
-  margin: 1.5rem;
+    margin: 1.5rem;
 }
 
 .index .m-3 {
-  margin: 2rem;
+    margin: 2rem;
 }
 
 .index .m-4 {
-  margin: 3rem;
+    margin: 3rem;
 }
 
 .index .m-5 {
-  margin: 4rem;
+    margin: 4rem;
 }
 
 .index .py-1 {
-  padding: 1rem 0;
+    padding: 1rem 0;
 }
 
 .index .py-2 {
-  padding: 1.5rem 0;
+    padding: 1.5rem 0;
 }
 
 .index .py-3 {
-  padding: 2rem 0;
+    padding: 2rem 0;
 }
 
 .index .py-4 {
-  padding: 3rem 0;
+    padding: 3rem 0;
 }
 
 .index .py-5 {
-  padding: 4rem 0;
+    padding: 4rem 0;
 }
 
 .index .p-1 {
-  padding: 1rem;
+    padding: 1rem;
 }
 
 .index .p-2 {
-  padding: 1.5rem;
+    padding: 1.5rem;
 }
 
 .index .p-3 {
-  padding: 2rem;
+    padding: 2rem;
 }
 
 .index .p-4 {
-  padding: 3rem;
+    padding: 3rem;
 }
 
 .index .p-5 {
-  padding: 4rem;
+    padding: 4rem;
 }
 
 .index .card {
-  background-color: #fff;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  padding: 2rem;
-  margin: 1rem;
-  color: #333;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin: 1rem;
+    color: #333;
 }
 
 .index .card-lang {
-  background-color: #fff;
-  width: 15rem;
-  border-radius: 1rem;
-  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  padding: 5px;
-  margin: 5px;
-  color: #333;
+    background-color: #fff;
+    width: 15rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    margin: 5px;
+    color: #333;
 }
 
-.index .btn {
-  display: inline-block;
-  padding: .5rem 1.5rem;
-  cursor: pointer;
-  background: #4D40CC;
-  color: #4D40CC;
-  border: none;
-  border-radius: 5px;
-  list-style: none;
-  text-decoration: none;
-  text-align: center;
+.btn {
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    background: #4D40CC;
+    color: #4D40CC;
+    border: none;
+    border-radius: 5px;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
 }
 
-.index .btn-outline {
-  background-color: transparent;
-  border: 1px #4D40CC solid;
+.btn-outline {
+    background-color: transparent;
+    border: 1px #4D40CC solid;
+    width: auto;
 }
 
 .index .btn-outline-2 {
-  background-color: transparent;
-  border: 1px #4D40CC solid;
+    background-color: transparent;
+    border: 1px #4D40CC solid;
 }
 
 .index .btn:hover {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 .index .text-center {
-  text-align: center;
+    text-align: center;
 }
 
 .index .lead {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .index .sm {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .index .md {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 .index .lg {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 .index .xl {
-  font-size: 4rem;
+    font-size: 4rem;
 }
 
 .index .navbar .btn {
-  display: block;
-  margin: 0 .1rem;
-  padding: .3rem .5rem;
-  cursor: pointer;
-  border-radius: .3rem;
-  border: 0.1rem #4D40CC solid;
-  width: 5rem;
+    display: block;
+    margin: 0 .1rem;
+    padding: .3rem .5rem;
+    cursor: pointer;
+    border-radius: .3rem;
+    border: 0.1rem #4D40CC solid;
+    width: 5rem;
 }
 
 .index .navbar .btn-sign {
-  width: 100px;
-  background: white;
-  color: #333;
-  border: 0.1rem #4D40CC solid;
+    width: 5rem;
+    background: #4D40CC;
+    color: #fff;
+    border: 0.1rem #fff solid;
 }
 
 .index .navbar .btn-sign:hover {
-  border: 0.1rem #4D40CC solid;
+    border: 0.1rem #fff solid;
 }
 
 .index .navbar .btn-log {
-  color: #333;
-  width: 100px;
-  background: #f66e23;
+    color: #333;
+    width: 5rem;
+
+    background: #fff;
+    border: 0.1rem #4D40CC solid;
 }
