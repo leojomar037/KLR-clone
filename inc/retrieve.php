@@ -43,6 +43,14 @@
     
     $sql_get_subjects = mysqli_query($connection,$query_get_subjects) OR trigger_error('Query FAILED SQL:$query_create ERROR:'.mysqli_error($connection),E_USER_ERROR );
     $subjectsCount =mysqli_num_rows($sql_get_subjects);
+
+    //for createAppointment.php
+    //get courses --added by mnrichae 
+    $query_get_courses ="SELECT * FROM reference_code WHERE id > 15 ORDER BY name ASC";
+    $sql_get_courses = $connection->query($query_get_courses);
+    if($sql_get_courses->num_rows> 0){
+      $courses= mysqli_fetch_all($sql_get_courses, MYSQLI_ASSOC);
+    }
     
     
 ?>
