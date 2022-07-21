@@ -8,14 +8,7 @@
                             <h6>Already have an account ?</h6>
                             <a class="toggle">Sign in</a>
                         </div>
-                        <?php
-                                if (isset($_GET['errorReg'])){?>
-                                    <p class = "error alert alert-danger" ><i class='bi bi-exclamation-circle-fill'></i> <?php echo $_GET['errorReg']; ?></p>    
-                            <?php }?>
-                            <?php
-                                if (isset($_GET['successReg'])){?>
-                                    <p class = "success alert alert-success" ><i class="bi bi-check-circle-fill"></i> <?php echo $_GET['successReg']; ?></p>    
-                            <?php }?>
+                      
 
                             <div class="actual-form">
                             <div>
@@ -144,6 +137,14 @@
 
                               
                         </div>
+                        <?php
+                                if (isset($_GET['errorReg'])){?>
+                                    <p class = "alert alert-danger" ><i class='bi bi-exclamation-circle-fill'></i> <?php echo $_GET['errorReg']; ?></p>    
+                            <?php }?>
+                            <?php
+                                if (isset($_GET['successReg'])){?>
+                                    <p class = "alert alert-success" ><i class="bi bi-check-circle-fill"></i> <?php echo $_GET['successReg']; ?></p>    
+                            <?php }?>
 
                             <input type="submit" value="Sign Up" class="sign-btn" name="create" id="create">
                             <!-- <p class="text">
