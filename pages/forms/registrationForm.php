@@ -21,13 +21,24 @@
                             <div>
                                 <!--First Name-->
                                 <div class="input-wrap">   
+                                <?php if(isset($_GET['first_name'])) {?>
                                         <input 
                                             type="text" 
                                             id="first_name" 
                                             name="first_name" 
                                             class="input-field" 
                                             autocomplete="off" 
+                                            value = "<?php echo $_GET['first_name'];?>"
                                             onblur="validateFirstName()" />
+                                        <?php }else{?>
+                                            <input 
+                                            type="text" 
+                                            id="first_name" 
+                                            name="first_name" 
+                                            class="input-field" 
+                                            autocomplete="off" 
+                                            onblur="validateFirstName()"/>
+                                    <?php }?>
 
                                     <label>First Name</label>
                                     <div class="error" id="first_name_error"></div>
@@ -35,13 +46,24 @@
 
                                 <!--Last Name-->
                                 <div class="input-wrap">
+                                <?php if(isset($_GET['last_name'])) {?>
                                         <input 
                                             type="text" 
                                             id="last_name" 
                                             name="last_name" 
                                             class="input-field" 
                                             autocomplete="off" 
+                                            value = "<?php echo $_GET['last_name'];?>"
                                             onblur="validateLastName()" />
+                                        <?php }else{?>
+                                            <input 
+                                            type="text" 
+                                            id="last_name" 
+                                            name="last_name" 
+                                            class="input-field" 
+                                            autocomplete="off" 
+                                            onblur="validateLastName()" />
+                                    <?php }?>
                                     <label>Last Name</label>
                                     <div class="error" id="last_name_error"></div>
                                     
@@ -49,13 +71,24 @@
                                 
                                 <!--Email-->
                                 <div class="input-wrap">
+                                <?php if(isset($_GET['regemail'])) {?>
                                             <input 
                                                 type="email" 
                                                 id="regemail" 
                                                 name="regemail" 
                                                 class="input-field" 
                                                 autocomplete="off" 
+                                                value = "<?php echo $_GET['regemail'];?>"
                                                 onblur="validateRegEmail()" />
+                                            <?php }else{?>
+                                                <input 
+                                                type="email" 
+                                                id="regemail" 
+                                                name="regemail" 
+                                                class="input-field" 
+                                                autocomplete="off" 
+                                                onblur="validateRegEmail()" />
+                                        <?php }?>
                                         <label>Email</label>
                                         <div class="error" id="regemail_error"></div>
                                 </div>
@@ -91,9 +124,19 @@
                                 <div class="input-wrap">
 
                                     <select name="role" class="input-field" id="role" onblur="validateRole()">
+                                        <?php if(isset($_GET['role'])) {?>
+                                        <option value="" ></option>
+                                        <option value="2" <?php echo ($_GET['role'] == "2") ? "selected" : null;?>>Student</option>
+                                        <option value="3" <?php echo ($_GET['role'] == "3") ? "selected" : null;?>>Tutor</option>
+                                        
+                                        <?php }else{?>
                                         <option value="" ></option>
                                         <option value="2">Student</option>
                                         <option value="3">Tutor</option>
+                                        <?php }?>
+                                        <!-- <option value="" ></option>
+                                        <option value="2">Student</option>
+                                        <option value="3">Tutor</option> -->
                                     </select>
                                     <label>Role</label>
                                     <div class="error" id="role_error"></div>
