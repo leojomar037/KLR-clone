@@ -7,7 +7,7 @@
         $password = trim($_POST['logpassword']);
 
         if (empty($email) || empty($password)){
-            header("Location: ./login.php?error=Please fill up the email and/or password.");
+            header("Location: ./login.php?error=All fields required.");
         } else {
             $check_query = "SELECT * FROM users WHERE email = '$email'";
             $query_match = mysqli_query($connection, $check_query) OR
@@ -19,11 +19,10 @@
             $current_email = $mysql_array['email'];
 
             if(mysqli_num_rows($query_match) == 0){
-                header("Location: ./login.php?error=No records found. Sign up instead.");
+                header("Location: ./login.php?error=No records found.");
                 echo "<script>window.location.href = './login.php'</script>";
             }
             elseif (($password=== $current_password) || (mysqli_num_rows($query_match) > 0 && password_verify($password, $current_password))) {
-                // $user_data = 'email='. $email; 
                 $_SESSION['status'] = 'valid';
                 $_SESSION['email'] = $mysql_array['email'];
                 $_SESSION['role'] = $mysql_array['role'];
@@ -32,11 +31,9 @@
                 $_SESSION['user_id'] = $mysql_array['user_id'];
                 
                 echo "<script>window.location.href = './home.php'</script>";
-                // header("Location: ./home.php?$user_data");
-                echo "<script>alert('Successful')</script>";
             }
              else {
-                header("Location: ./login.php?error=Login failed. Wrong password.");
+                header("Location: ./login.php?error=Wrong password.");
                 echo "<script>window.location.href = './login.php'</script>";
             }
         }
