@@ -19,9 +19,9 @@ if(isset($_POST['create'])){
     $confirm_password = $_POST['regconfirm_password'];
     $role = $_POST['role'];
 
+    $user_data = 'first_name='. $first_name. '&last_name='. $last_name. '&regemail='. $email. '&role='. $role; 
   
-  
-        if (empty($first_name) || empty($last_name) || empty($email) || empty($password) || empty($role)) {
+    if (empty($first_name) || empty($last_name) || empty($email) || empty($password) || empty($role)) {
         header("Location: ./registration.php?errorReg=All fields required.&$user_data#");
     } else{
         $query_email_check = "SELECT * FROM users WHERE email = '$email'";
@@ -31,25 +31,18 @@ if(isset($_POST['create'])){
             exit();
         } else {
             if(strlen($original_password) < 4 || strlen($original_password) > 16) {
-                header("Location: ./registration.php?errorReg=Password must be more within 3-16 characters&$user_data");
+                header("Location: ./registration.php?errorReg=Password must be within 3-16 characters&$user_data");
                 exit();
                 } else {
                     if($original_password != $confirm_password){
                         header("Location: ./registration.php?errorReg=Passwords are not matched.&$user_data");
                     } else {
-                        if (empty(!$adult_name) || empty(!$adult_number) || empty(!$adult_email) || empty(!$relation)){
-                            $query_create = "INSERT INTO users (first_name, last_name, email, password, role, adult_name, adult_number, adult_email, relation) 
-                        VALUES('$first_name','$last_name','$email','$password','$role','$adult_name', '$adult_number', '$adult_email','$relation')";
-                        $sql_create = mysqli_query($connection,$query_create) OR trigger_error('Query FAILED SQL:$query_create ERROR:'.mysqli_error($connection),E_USER_ERROR );
-                        header("Location: ./registration.php?successReg=Successfully Registered&$user_data");
-                        }  else {
                         $query_create = "INSERT INTO users (first_name, last_name, email, password, role) 
                         VALUES('$first_name','$last_name','$email','$password','$role')";
                         $sql_create = mysqli_query($connection,$query_create) OR trigger_error('Query FAILED SQL:$query_create ERROR:'.mysqli_error($connection),E_USER_ERROR );
-                        header("Location: ./registration.php?successReg=Successfully Registered&$user_data");
-                        }
-                }
-            }  
+                        header("Location: ./registration.php?successReg=Successfully Registered!&$user_data");
+                    }
+                }   
             } 
         }
 
