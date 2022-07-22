@@ -7,7 +7,7 @@
         $password = trim($_POST['logpassword']);
 
         if (empty($email) || empty($password)){
-            header("Location: ./login.php?error=Please fill up the email and/or password.");
+            header("Location: ./login.php?error=All fields required.");
         } else {
             $check_query = "SELECT * FROM users WHERE email = '$email'";
             $query_match = mysqli_query($connection, $check_query) OR
@@ -23,7 +23,6 @@
                 echo "<script>window.location.href = './login'</script>";
             }
             elseif (($password=== $current_password) || (mysqli_num_rows($query_match) > 0 && password_verify($password, $current_password))) {
-                // $user_data = 'email='. $email; 
                 $_SESSION['status'] = 'valid';
                 $_SESSION['role'] = $mysql_array['role'];
                 $_SESSION['first_name'] = $mysql_array['first_name'];
