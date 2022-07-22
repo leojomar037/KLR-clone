@@ -3,6 +3,8 @@ const inputs = document.querySelectorAll(".input-field");
 
 inputs.forEach((inp) => {
 
+
+
 if (inp.value != ""){
     return  inp.classList.add("active");
 }

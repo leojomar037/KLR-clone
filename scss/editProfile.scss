@@ -1,38 +1,39 @@
 * {
     padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5vh;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.5vh;
 }
 
 .editProfile{
+
     width: 100%;
-    min-height: 80vh;
+    min-height: 90vh;
     overflow: hidden;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
 
+
     .box{
         position: relative;
-        width: 100%;
-        max-width: 100vw;
-        height: 95vh;
-        border: 0.1rem #f66e23 solid;
-
+        width: 100vw;
+        height: calc(90vh - 2rem);
+        // border: 0.1rem #f66e23 solid;
         background-color: #fff;
-        border-radius: 3.3rem;
+        border-radius: 1rem;
         box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
 
             .inner-box{
                 position: absolute;
-                width: calc(100% - 4.1rem);
-                height: calc(100% - 4.1rem);
+                width:100%;
+                height:100%;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+
 
 
                 .forms-wrap{
@@ -45,15 +46,16 @@
                     grid-template-columns: 1fr;
                     grid-template-rows: 1fr;
                     transition: 0.8s ease-in-out;
+
+
                     
                     .sign-in-form{
-                        max-width: 80%;
                         width: 100%;
-                        margin: 0 auto;
                         height: 100%;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-evenly;
+
                         
 
                         .heading{
@@ -72,7 +74,6 @@
                             }
                             h2 {
                                 font-size: 2.1rem;
-                                font-weight: 600;
                                 color: #151111;
                                 margin-top: 1rem;
                             }
@@ -95,6 +96,7 @@
                                 font-size: 0.8rem;
                                 margin-bottom: 2rem;
                                 transition: 0.3s;
+                                margin-top: -2rem;
                             
                                 &:hover {
                                     background-color: #151111;
@@ -114,7 +116,6 @@
                                     border: none;
                                     outline: none;
                                     border-bottom: .1rem solid #bbb;
-                                    padding: 0;
                                     font-size: 0.95rem;
                                     color: #151111;
 
@@ -141,8 +142,6 @@
                                     color: red;
                                     bottom: -2rem;
                                     font-size: .7rem;
-                                    margin: 0;
-                                    padding: 0;
                                     i{
                                     font-size: inherit;
 

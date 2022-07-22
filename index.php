@@ -1,4 +1,10 @@
-<?php require('./inc/indexSession.php')?>
+<?php 
+    require('./inc/retrieve.php');
+    
+
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,10 +36,10 @@
                             <a href="#reviews" class="links">Reviews</a></li>
                         <li>
                             <!-- <a class="btn btn-log"  id="btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a> -->
-                            <a href="login.php" class="btn btn-log"  id="btn-login" >Log In</a>
+                            <a href="login" class="btn btn-log"  id="btn-login" >Log In</a>
                         </li>
                         <li>
-                            <a href="registration.php" class="btn btn-sign">Sign Up</a>
+                            <a href="registration" class="btn btn-sign">Sign Up</a>
                         </li>
                     </ul>
                 </nav>
@@ -146,61 +152,33 @@
         </div>
     </section>
 
-
-
-
-
     <!-- Teachers -->
     <section class="teachers " id="teachers">
         <div class="slide-container swiper container ">
             <h1>Our Online Tutors</h1>
             <div class="slide-content ">
                 <div class="card-wrapper swiper-wrapper ">
+
+
+                <?php while($tutors = mysqli_fetch_array($sql_get_lasttutors)) {?>
+                    <!--card-->
                     <div class="slider-card swiper-slide ">
                         <div class="image-content ">
                             <span class="overlay "></span>
-
                             <div class="card-image ">
-                                <img src="images/ken.jpg " alt=" " class="card-img ">
+                                <img src="images/m.png " alt=" " class="card-img ">
                             </div>
                         </div>
+
                         <div class="card-content ">
-                            <h2 class="name "> Ken Domenick Sabella</h2>
-                            <p class="description ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis nemo vero dolor </p>
+                            <h2 class="name "><?php echo $tutors['first_name']." ".$tutors['last_name']  ?></h2>
+                            <p class="description "> <?php echo $tutors['email']  ?></p>
 
                             <button class="button-slider  "> View More</button>
                         </div>
                     </div>
-                    <div class="slider-card swiper-slide ">
-                        <div class="image-content ">
-                            <span class="overlay "></span>
-
-                            <div class="card-image ">
-                                <img src="images/ken.jpg " alt=" " class="card-img ">
-                            </div>
-                        </div>
-                        <div class="card-content ">
-                            <h2 class="name "> Ken Domenick Sabella</h2>
-                            <p class="description ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis nemo vero dolor </p>
-
-                            <button class="button-slider "> View More</button>
-                        </div>
-                    </div>
-                    <div class="slider-card swiper-slide ">
-                        <div class="image-content ">
-                            <span class="overlay "></span>
-
-                            <div class="card-image ">
-                                <img src="images/ken.jpg " alt=" " class="card-img ">
-                            </div>
-                        </div>
-                        <div class="card-content ">
-                            <h2 class="name "> Ken Domenick Sabella</h2>
-                            <p class="description ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis nemo vero dolor </p>
-
-                            <button class="button-slider "> View More</button>
-                        </div>
-                    </div>
+                    <!--card-->
+                  <?php } ?>
                 </div>
             </div>
             <div class="swiper-button-next swiper-navBtn "></div>
@@ -213,66 +191,33 @@
     <section class="reviews" id="reviews">
         <h1>What Parents Say</h1>
         <div class="wrapper container ">
+
+
+        <?php while($review = mysqli_fetch_array($sql_get_reviews)){?>
             <div class="box ">
                 <i class="fas fa-quote-left quote "></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid assumenda qui quod minus illum adipisci saepe est facere ex, .</p>
+                <p><?php echo $review['review'] ?></p>
                 <div class="rev-content ">
                     <div class="info-rev ">
-                        <div class="name-rev ">Leo Reyes</div>
-                        <div class="job ">Parents</div>
+                        <div class="name-rev "><?php echo $review['name'] ?></div>
+                        <div class="job "><?php echo $review['date'] ?></div>
                         <div class="stars ">
+                            <?php 
+                                $rate =  $review['rate'];
+                                for($i=0;$i<$rate;$i++){
+                            ?>
                             <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
+                            <?php } ?>
+                            
+                            <?php for($i;$i<5;$i++){?>
+                                <i class="fa-regular fa-star"></i>
+                            <?php } ?>
                         </div>
                     </div>
-                    <div class="image-rev ">
-                        <img src="images/ken.jpg " alt=" ">
-                    </div>
+                    
                 </div>
             </div>
-            <div class="box ">
-                <i class="fas fa-quote-left quote "></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid assumenda qui quod minus illum adipisci saepe est facere ex, .</p>
-                <div class="rev-content ">
-                    <div class="info-rev ">
-                        <div class="name-rev ">Leo Reyes</div>
-                        <div class="job ">Parents</div>
-                        <div class="stars ">
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                        </div>
-                    </div>
-                    <div class="image-rev ">
-                        <img src="images/ken.jpg " alt=" ">
-                    </div>
-                </div>
-            </div>
-            <div class="box ">
-                <i class="fas fa-quote-left quote "></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid assumenda qui quod minus illum adipisci saepe est facere ex, .</p>
-                <div class="rev-content ">
-                    <div class="info-rev ">
-                        <div class="name-rev ">Leo Reyes</div>
-                        <div class="job ">Parents</div>
-                        <div class="stars ">
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                            <i class="fas fa-star "></i>
-                        </div>
-                    </div>
-                    <div class="image-rev ">
-                        <img src="images/ken.jpg " alt=" ">
-                    </div>
-                </div>
-            </div>
+        <?php } ?>
         </div>
     </section>
     <!-- Footer -->

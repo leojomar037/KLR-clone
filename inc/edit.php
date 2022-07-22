@@ -1,8 +1,8 @@
 <?php
     require ('./connection/database.php');
 
-    if ($_SESSION['user_id']) {
-        $id = $_SESSION['user_id'];
+    if ($_SESSION['id']) {
+        $id = $_SESSION['id'];
 
         $query_update = "SELECT * from users WHERE user_id = '$id'";
 

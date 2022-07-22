@@ -8,6 +8,7 @@
 
 :root {
     --primary-color: #f66e23;
+    --hover-color: #4D40CC;
     --panel-color: #fff;
     --text-color: #333;
     --border-color: #e6e5e5;
@@ -32,7 +33,6 @@ nav {
     padding: 0.6rem 0.6rem;
     border-right: 2px solid var(--border-color);
     transition: var(--trans-05);
-    z-index: 999999999999999;
 }
 
 nav.close {
@@ -121,15 +121,16 @@ nav .menu-items {
     position: relative;
 }
 
-.menu-items li a:hover:before {
+
+/* .menu-items li a:hover:before {
     content: "";
     left: -7px;
     position: absolute;
     height: 5px;
     width: 5px;
     border-radius: 50%;
-    background-color: var(--primary-color);
-}
+    background-color: var(--hover-color);
+} */
 
 .menu-items li a i {
     font-size: 1.3rem;
@@ -143,7 +144,7 @@ nav .menu-items {
 
 .menu-items li a .link-name {
     font-size: 1.1rem;
-    font-weight: 400;
+    font-weight: 700;
     color: var(--text-color);
     transition: var(--trans-05);
 }
@@ -153,9 +154,22 @@ nav.close li a .link-name {
     pointer-events: none;
 }
 
-.nav-links li a:hover i,
-.nav-links li a:hover .link-name {
+.links-hover a:hover i,
+.links-hover a:hover .link-name,
+.logout-mode a:hover i,
+.logout-mode a:hover .link-name {
     color: #4D40CC;
+}
+
+.links-hover a:hover .link-name {
+    height: 2.5rem;
+    width: 60%;
+    display: flex;
+    padding-left: 2px;
+    justify-content: start;
+    align-items: center;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .menu-items .logout-mode {

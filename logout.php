@@ -1,4 +1,5 @@
 <?php 
+
         if (session_status() === PHP_SESSION_NONE) {
                 session_start();
         }
@@ -8,7 +9,7 @@
         unset($_SESSION['role']);
         mysqli_close($connection);
 
-        echo "<script>window.location.href = './index.php'</script>";
+        echo "<script>window.location.href = './'</script>";
 
 ?>
 

@@ -9,9 +9,9 @@
 
 .editProfile {
   width: 100%;
-  min-height: 80vh;
+  min-height: 90vh;
   overflow: hidden;
-  padding: 1rem;
+  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,20 +25,18 @@
 
 .editProfile .box {
   position: relative;
-  width: 100%;
-  max-width: 100vw;
-  height: 95vh;
-  border: 0.1rem #f66e23 solid;
+  width: 100vw;
+  height: calc(90vh - 2rem);
   background-color: #fff;
-  border-radius: 3.3rem;
+  border-radius: 1rem;
   -webkit-box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
           box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
 }
 
 .editProfile .box .inner-box {
   position: absolute;
-  width: calc(100% - 4.1rem);
-  height: calc(100% - 4.1rem);
+  width: 100%;
+  height: 100%;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -62,9 +60,7 @@
 }
 
 .editProfile .box .inner-box .forms-wrap .sign-in-form {
-  max-width: 80%;
   width: 100%;
-  margin: 0 auto;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,7 +92,6 @@
 
 .editProfile .box .inner-box .forms-wrap .sign-in-form .heading h2 {
   font-size: 2.1rem;
-  font-weight: 600;
   color: #151111;
   margin-top: 1rem;
 }
@@ -123,6 +118,7 @@
   margin-bottom: 2rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  margin-top: -2rem;
 }
 
 .editProfile .box .inner-box .forms-wrap .sign-in-form .actual-form .sign-btn:hover {
@@ -143,7 +139,6 @@
   border: none;
   outline: none;
   border-bottom: .1rem solid #bbb;
-  padding: 0;
   font-size: 0.95rem;
   color: #151111;
 }
@@ -174,8 +169,6 @@
   color: red;
   bottom: -2rem;
   font-size: .7rem;
-  margin: 0;
-  padding: 0;
 }
 
 .editProfile .box .inner-box .forms-wrap .sign-in-form .actual-form .input-wrap .error i {

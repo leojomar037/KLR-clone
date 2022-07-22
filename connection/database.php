@@ -1,9 +1,12 @@
 <?php
-    $host = "localhost";
-    $user = "root";
-    $password = "12345";
-    $database = "klrtutorials";
-    $port = 3307;
+    require(__DIR__.'/../getenv.php');
+
+
+    $host = $_ENV['DBHOST'];
+    $user =  $_ENV['DBUSER'];
+    $password = $_ENV['DBPASSWORD'];
+    $database = $_ENV['DATABASE'];
+    $port = $_ENV['DBPORT'];
 
     $connection = mysqli_connect($host,$user,$password,$database,$port);
 

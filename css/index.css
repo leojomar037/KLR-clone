@@ -7,7 +7,9 @@
     font-family: 'Poppins', sans-serif;
     font-size: 2.5vh;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 .index .con-logo {
     margin-top: 1.3rem;
     font-size: 2rem;
@@ -65,6 +67,7 @@
     width: 100vw;
     -webkit-transition: .6 ease;
     transition: .6 ease;
+    padding-bottom: 2rem;
 }
 
 .index header.sticky .nav-bar {
@@ -280,6 +283,7 @@
 .index .cloud .grid {
     -ms-grid-columns: 4fr 3fr;
     grid-template-columns: 4fr 3fr;
+    overflow: hidden;
 }
 
 .index .cloud .grid img {
@@ -520,6 +524,7 @@
     border-radius: 3px;
     padding: 1.5rem;
     width: calc(33% - 10px);
+    height: 35vh;
 }
 
 .index .wrapper .box i.quote {

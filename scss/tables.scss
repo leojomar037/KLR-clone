@@ -1,0 +1,36 @@
+.studentTable,.tutorsTable,.subjectsTable,.programsTable{
+    padding: 1rem;
+    height: calc(90vh - 2rem);
+
+    .title{
+        display: flex;
+        align-items: center;
+
+        i{
+            font-size: 2rem;
+            padding: .3rem;
+            border-radius: .5rem;
+            color: white;
+            background-color: #4D40CC;
+            margin-right: 1rem;
+        }
+        .text{
+            font-size: 1.8rem;
+        }
+    }
+    .box{
+        margin-top: 1rem;
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 90%;
+        table{
+            thead{
+                position: sticky;
+                width: 100%;
+                top: 0;
+                z-index: 500;
+                background-color: #4D40CC;
+            }
+        }
+    }
+}

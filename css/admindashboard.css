@@ -1,263 +1,111 @@
-.dashboard {
-    background-color: var(--panel-color);
-    position: relative;
-    min-height: 100vh;
-    width: calc(100% - 250px);
-    padding: 0.625rem 0.875rem;
-    transition: var(--trans-05);
+.adminDashboard, .schedule {
+  height: 95%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-nav.close~.dashboard {
-    left: 4.563rem;
-    width: calc(100% - 73px);
+.adminDashboard .overview, .schedule .overview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3rem 1rem 1rem 1rem;
 }
 
-.dashboard .top {
-    position: fixed;
-    align-items: center;
-    top: 0;
-    left: 15.625rem;
-    display: flex;
-    width: calc(100% - 250px);
-    padding: 10px 14px;
-    background-color: var(--panel-color);
-    transition: var(--trans-05);
-    z-index: 10;
+.adminDashboard .overview .title, .schedule .overview .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-nav.close~.dashboard .top {
-    left: 4.563rem;
-    width: calc(100% - 73px);
+.adminDashboard .overview .title i, .schedule .overview .title i {
+  font-size: 2rem;
+  padding: .3rem;
+  border-radius: .5rem;
+  color: white;
+  background-color: #4D40CC;
+  margin-right: 1rem;
 }
 
-.dashboard .top .sidebar-toggle {
-    font-size: 1.625rem;
-    color: var(--text-color);
-    cursor: pointer;
+.adminDashboard .overview .title .text, .schedule .overview .title .text {
+  font-size: 1.8rem;
 }
 
-.dashboard .top .sidebar-toggle:hover {
-    color: #4D40CC;
+.adminDashboard .overview .boxes, .schedule .overview .boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 2rem;
+  gap: 1rem;
 }
 
-.dashboard .top .details {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.adminDashboard .overview .boxes .box, .schedule .overview .boxes .box {
+  width: 25%;
+  height: 25vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #F66E23;
 }
 
-.top .name {
-    color: #4D40CC;
-    font-weight: 500;
-    font-size: 0.938rem;
+.adminDashboard .overview .boxes .box i, .schedule .overview .boxes .box i {
+  font-size: 2rem;
 }
 
-.top .role {
-    color: #333;
-    font-weight: 900;
-    font-size: 0.75rem;
+.adminDashboard .overview .boxes .box .number, .schedule .overview .boxes .box .number {
+  font-size: 2rem;
 }
 
-.top img {
-    width: 2.5rem;
-    border-radius: 50%;
-    margin-left: 0.938rem;
-    margin-right: 0.938rem;
+.adminDashboard .overview .boxes .box .text, .schedule .overview .boxes .box .text {
+  font-size: 1.8rem;
 }
 
-.dashboard .dash-content {
-    padding-top: 0.625rem;
-    height: 90vh;
+.adminDashboard .activity, .schedule .activity {
+  height: 1fr;
+  padding: 1rem;
 }
 
-.dash-content .title {
-    display: flex;
-    align-items: center;
-    margin: 4.375rem 0 1.875rem 0;
+.adminDashboard .activity .title, .schedule .activity .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.dash-content .title i {
-    position: relative;
-    height: 2.188rem;
-    width: 2.188rem;
-    background-color: #4D40CC;
-    border-radius: 6px;
-    color: var(--title-icon-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
+.adminDashboard .activity .title i, .schedule .activity .title i {
+  font-size: 2rem;
+  padding: .3rem;
+  border-radius: .5rem;
+  color: white;
+  margin-right: 1rem;
+  background-color: #4D40CC;
 }
 
-.dash-content .title .text {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--text-color);
-    margin-left: 0.625rem;
+.adminDashboard .activity .title .text, .schedule .activity .title .text {
+  font-size: 1.8rem;
 }
 
-.dash-content .boxes {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.dash-content .boxes .box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 12px;
-    width: calc(100% / 4 - 15px);
-    padding: 0.938rem 1.25rem;
-    background-color: #f66e23;
-}
-
-.box i {
-    font-size: 1.563rem;
-    margin: 0.313rem 0;
-}
-
-.box .number {
-    font-size: 2.188rem;
-    margin: 0.313rem 0;
-}
-
-.box .text {
-    white-space: nowrap;
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: var(--text-color);
-}
-
-.dash-content .activity .activity-data {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-}
-
-.activity .activity-data {
-    display: flex;
-}
-
-.activity-data .data {
-    display: flex;
-    flex-direction: column;
-    margin: 0 15px;
-}
-
-.activity-data .data-title {
-    font-size: 0.938rem;
-    font-weight: 500;
-    color: var(--text-color);
-}
-
-.activity-data .data .data-list {
-    font-size: 0.75rem;
-    font-weight: 400;
-    margin-top: 1.25rem;
-    white-space: nowrap;
-    color: var(--text-color);
-}
-
-@media (max-width: 1000px) {
-    nav {
-        width: 4.563rem;
-    }
-    nav.close {
-        width: 15.625rem;
-    }
-    nav .logo_name {
-        opacity: 0;
-        pointer-events: none;
-    }
-    nav.close .logo_name {
-        opacity: 1;
-        pointer-events: auto;
-    }
-    nav li a .link-name {
-        opacity: 0;
-        pointer-events: none;
-    }
-    nav.close li a .link-name {
-        opacity: 1;
-        pointer-events: auto;
-    }
-    nav~.dashboard {
-        left: 4.563rem;
-        width: calc(100% - 73px);
-    }
-    nav.close~.dashboard {
-        left: 15.625rem;
-        width: calc(100% - 250px);
-    }
-    nav~.dashboard .top {
-        left: 4.563rem;
-        width: calc(100% - 73px);
-    }
-    nav.close~.dashboard .top {
-        left: 15.625rem;
-        width: calc(100% - 250px);
-    }
-    .activity .activity-data {
-        overflow-x: scroll;
-    }
-}
-
-@media (max-width:780px) {
-    .dash-content .boxes .box {
-        width: calc(100% / 2 - 15px);
-        margin-top: 0.938rem;
-    }
-}
-
-@media (max-width:560px) {
-    .dash-content .boxes .box {
-        width: 100%;
-    }
-}
-
-@media (max-width:500px) {
-    nav {
-        width: 4.563rem;
-    }
-    nav.close {
-        width: 4.563rem;
-    }
-    nav .logo_name {
-        opacity: 0;
-        pointer-events: none;
-    }
-    nav.close .logo_name {
-        opacity: 0;
-        pointer-events: none;
-    }
-    nav li a .link-name {
-        opacity: 0;
-        pointer-events: none;
-    }
-    nav.close li a .link-name {
-        opacity: 0;
-        pointer-events: none;
-    }
-    nav~.dashboard {
-        left: 73px;
-        width: calc(100% - 73px);
-    }
-    nav.close~.dashboard {
-        left: 73px;
-        width: calc(100% - 73px);
-    }
-    nav~.dashboard .top {
-        left: 73px;
-        width: calc(100% - 73px);
-    }
-    nav.close~.dashboard .top {
-        left: 73px;
-        width: calc(100% - 73px);
-    }
-    .dashboard .top .sidebar-toggle {
-        display: none;
-    }
+.adminDashboard .activity .activity-data table, .schedule .activity .activity-data table {
+  margin-top: 1.5rem;
+  width: 100%;
 }

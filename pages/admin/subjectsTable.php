@@ -1,9 +1,12 @@
 <?php require('./inc/retrieve.php')?>
 
-<div class="container">
-<h2>List of Subjects</h2>
+<div class="subjectsTable">
+    <div class="title">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        <span class="text">Subjects</span>
+    </div>
 
-    <div class="card">
+    <div class="box">
         <table class="table table-striped">
             <thead>
                 <tr>

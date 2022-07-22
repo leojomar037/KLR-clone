@@ -1,8 +1,6 @@
 
 <?php 
-
-require('./inc/login.php');
-// require('./inc/create.php');
+    require('./inc/login.php');
 
 
 ?>

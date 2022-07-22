@@ -1,8 +1,10 @@
 <form action="./registration.php" method="post" autocomplete="off" class="sign-up-form">
-                        <div class="logo">
-                            <img src="Images/sign-in.jpg" alt="">
-                            <h4>KLR Tutorials</h4>
-                        </div>
+                        <a class="link-to-logo" href="/">
+                            <div class="logo">
+                                <img src="Images/sign-in.jpg" alt="">
+                                <h4>KLR Tutorials</h4>
+                            </div>
+                        </a>
                         <div class="heading">
                             <h2>Get Started</h2>
                             <h6>Already have an account ?</h6>

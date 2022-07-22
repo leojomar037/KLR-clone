@@ -1,0 +1,226 @@
+.main .dash-content-tutors {
+    padding-top: 0.625rem;
+    height: 90vh;
+}
+
+.dash-content-tutors .title {
+    display: flex;
+    align-items: center;
+    margin: 4.375rem 0 1.875rem 0;
+}
+
+.dash-content-tutors .title i {
+    position: relative;
+    height: 2.188rem;
+    width: 2.188rem;
+    background-color: #4D40CC;
+    border-radius: 6px;
+    color: var(--title-icon-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.dash-content-tutors .title .text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 0.625rem;
+}
+
+.dash-content-tutors .boxes {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.dash-content-tutors .boxes .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    width: 100%;
+    /* width: calc(100% / 4 - 15px); */
+    padding: 0.938rem 1.25rem;
+    background-color: #4D40CC;
+}
+
+.box .content {
+    width: 100%;
+    padding: .5rem;
+}
+
+.box .content .content-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box .content .content-details i {
+    font-size: 1.5rem;
+}
+
+.box .content .content-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* .box i {
+    font-size: .563rem;
+    margin: 0.313rem 0;
+    color: #fff;
+} */
+
+.box .number {
+    font-size: 2.188rem;
+    margin: 0.313rem 0;
+    color: #fff;
+}
+
+.box .text {
+    white-space: nowrap;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #f66e23;
+    /* color: var(--text-color); */
+}
+
+.dash-content-tutors .activity .activity-data {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.activity .activity-data {
+    display: flex;
+}
+
+.activity-data .data {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+}
+
+.activity-data .data-title {
+    font-size: 0.938rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.activity-data .data .data-list {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-top: 1.25rem;
+    white-space: nowrap;
+    color: var(--text-color);
+}
+
+@media (max-width: 1000px) {
+    nav {
+        width: 4.563rem;
+    }
+    nav.close {
+        width: 15.625rem;
+    }
+    nav .logo_name {
+        opacity: 0;
+        pointer-events: none;
+    }
+    nav.close .logo_name {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    nav li a .link-name {
+        opacity: 0;
+        pointer-events: none;
+    }
+    nav.close li a .link-name {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    nav~.main {
+        left: 4.563rem;
+        width: calc(100% - 73px);
+    }
+    nav.close~.main {
+        left: 15.625rem;
+        width: calc(100% - 250px);
+    }
+    nav~.main .top {
+        left: 4.563rem;
+        width: calc(100% - 73px);
+    }
+    nav.close~.main .top {
+        left: 15.625rem;
+        width: calc(100% - 250px);
+    }
+    .activity .activity-data {
+        overflow-x: scroll;
+    }
+}
+
+@media (max-width:780px) {
+    .dash-content-tutors .boxes .box {
+        width: calc(100% / 2 - 15px);
+        margin-top: 0.938rem;
+    }
+}
+
+@media (max-width:560px) {
+    .dash-content-tutors .boxes .box {
+        width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    nav {
+        width: 4.563rem;
+    }
+    nav.close {
+        width: 4.563rem;
+    }
+    nav .logo_name {
+        opacity: 0;
+        pointer-events: none;
+    }
+    nav.close .logo_name {
+        opacity: 0;
+        pointer-events: none;
+    }
+    nav li a .link-name {
+        opacity: 0;
+        pointer-events: none;
+    }
+    nav.close li a .link-name {
+        opacity: 0;
+        pointer-events: none;
+    }
+    nav~.main {
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    nav.close~.main {
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    nav~.main .top {
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    nav.close~.main .top {
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    .main .top .sidebar-toggle {
+        display: none;
+    }
+}

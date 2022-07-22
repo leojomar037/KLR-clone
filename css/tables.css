@@ -1,0 +1,42 @@
+.studentTable, .tutorsTable, .subjectsTable, .programsTable {
+  padding: 1rem;
+  height: calc(90vh - 2rem);
+}
+
+.studentTable .title, .tutorsTable .title, .subjectsTable .title, .programsTable .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.studentTable .title i, .tutorsTable .title i, .subjectsTable .title i, .programsTable .title i {
+  font-size: 2rem;
+  padding: .3rem;
+  border-radius: .5rem;
+  color: white;
+  background-color: #4D40CC;
+  margin-right: 1rem;
+}
+
+.studentTable .title .text, .tutorsTable .title .text, .subjectsTable .title .text, .programsTable .title .text {
+  font-size: 1.8rem;
+}
+
+.studentTable .box, .tutorsTable .box, .subjectsTable .box, .programsTable .box {
+  margin-top: 1rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 90%;
+}
+
+.studentTable .box table thead, .tutorsTable .box table thead, .subjectsTable .box table thead, .programsTable .box table thead {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 500;
+  background-color: #4D40CC;
+}

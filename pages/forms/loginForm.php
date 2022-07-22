@@ -1,10 +1,12 @@
 <form action="./login.php" class="sign-in-form" method="post">
                     
                     
-                        <div class="logo">
-                            <img src="Images/sign-in.jpg" alt="">
-                            <h4>KLR Tutorials</h4>
-                        </div>
+                        <a class="link-to-logo" href="/">
+                            <div class="logo">
+                                <img src="Images/sign-in.jpg" alt="">
+                                <h4>KLR Tutorials</h4>
+                            </div>
+                        </a>
                         <div class="heading">
                             <h2>Welcome back</h2>
                             <h6>Not registered yet?</h6>
