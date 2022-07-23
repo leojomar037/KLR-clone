@@ -26,8 +26,6 @@
     } 
 
     if(isset($_POST['closeView'])){
-        $id = $_POST['id'];
-        $table = $_POST['table'];
         echo "<script>window.location.href = '../home#students'</script>";
     }
 
