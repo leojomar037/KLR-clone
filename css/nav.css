@@ -28,15 +28,16 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    width: 18vw;
+    width: 20vw;
     background-color: var(--primary-color);
     padding: 0.6rem 0.6rem;
     border-right: 2px solid var(--border-color);
     transition: var(--trans-05);
+    z-index: 99999999999999999;
 }
 
 nav.close {
-    width: 73px;
+    width:5vw;
 }
 
 nav .logo-name {
@@ -46,8 +47,7 @@ nav .logo-name {
 
 nav .logo-image {
     min-width: 4.2rem;
-    display: flex;
-    justify-content: center;
+    
 }
 
 nav .logo-image img {

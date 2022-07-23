@@ -2,7 +2,6 @@ const inputs = document.querySelectorAll(".input-field");
 
 
 inputs.forEach((inp) => {
-<<<<<<< HEAD
 
 
 
@@ -16,18 +15,6 @@ inp.addEventListener("blur", () => {
     if (inp.value != "") return;
     inp.classList.remove("active");
 });
-=======
-    if (inp.value !== ""){
-        inp.classList.add("active")
-    }
-    inp.addEventListener("focus", () => {
-        inp.classList.add("active")
-    });
-    inp.addEventListener("blur", () => {
-        if (inp.value !== "") return;
-        inp.classList.remove("active");
-    });
->>>>>>> 2eca682a4e4d258dd4adeb77e98870034ad7acdc
 
 });
 

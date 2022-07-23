@@ -27,22 +27,14 @@
                 </a>
             </li>
             <li class="links-hover">
-                <a href="#" class="prog-dropdown">
-                    <i class="fa-solid fa-users"></i>
-                    <span class="link-name ">Programs</span>
-                    <!-- <i class="fa-solid fa-caret-down down"></i> -->
+                <a href=" #bookAppointment">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="link-name ">Profile</span>
                     
                 </a>
-                <div class="display">
-                    <ul class="prog-show">
-                        <li><a href="">Elementary</a> </li>
-                        <li><a href="">Junior High School</a> </li>
-                        <li><a href="">Senior High School</a> </li>
-                        <li><a href="">College</a> </li>
-                    </ul>
-                </div>
-                
             </li>
+
+           
             
         </div>
             <div>
@@ -54,8 +46,6 @@
                     </a>
                 </li>
             </div>
-            
-        
     </div>
 
 </nav>
@@ -66,7 +56,11 @@
     </div> 
     <div class="section" id="profile">
         <?php require('./editProfile.php')?>
-    </div> 
+    </div>
+    
+    <div class="section" id="bookAppointment">
+        <?php require('./pages/students/bookAppointment.php')?>
+    </div>
 </main>
 
 

@@ -4,23 +4,21 @@ html,body,.section{
 }
 .section{
   padding-top: 10vh;
-  margin-left: 18vw;
 }
 
 
 .main {
   background-color: var(--panel-color);
   position: relative;
-  left: 15.625rem;
+  left: 20vw;
   height: 100vh;
-  width: calc(100% - 250px);
-  padding: 0.625rem 0.875rem;
+  width: calc(100% - 20vw);
   transition: var(--trans-05);
 }
 
 nav.close~.main {
-  left: 4.563rem;
-  width: calc(100% - 73px);
+  left: 5vw;
+  width: calc(100% - 5vw);
 }
 
 .main .top {
