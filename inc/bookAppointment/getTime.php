@@ -7,7 +7,7 @@ if($_GET['date'] && $_GET['tutor'] && $_GET['course'] && $_GET['program']){
     $string_date = strtotime($input);
     $date = date('Y-m-d',$string_date);
 
-    $query_time_date = "SELECT DISTINCT time FROM appointments
+    $query_time_date = "SELECT DISTINCT date,time FROM appointments
     WHERE date = '$date' AND tutor_id = ".$_GET['tutor']." AND course_id = ".$_GET['course']." AND program_id = ".$_GET['program']." 
     AND status = '1' AND date > CURDATE() ORDER BY date ASC"; 
     

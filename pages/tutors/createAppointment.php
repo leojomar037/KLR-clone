@@ -3,13 +3,15 @@
         <div class="box">
             <div class="inner-box">
                 <div class="forms-wrap">
-                    <form action="./createAppointment.php" class="sign-in-form" method="post" autocomplete="off">
+                    <form action="./inc/createAppointment.php" class="sign-in-form" method="post" autocomplete="off">
                         <div class="heading">
                             <h2>Create Appointment</h2>
                         </div>
 
                         <div class="actual-form">
                             <div>
+
+                                <input type="hidden" name="id" id="id" value="<?php echo $_SESSION['id']; ?>">
                                 <!--Program Name-->
                                 <div class="input-wrap">
                                     <select name="program" class="input-field" id="program" onblur="validateProgram()">

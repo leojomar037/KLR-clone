@@ -1,9 +1,11 @@
 <?php 
-    require("./connection/database.php");
+    require("../connection/database.php");
     
 
 if(isset($_POST['createAppointment'])){
-   
+    $id = $_POST['id'];
+
+
     function validate($data){
         $data = trim($data);
         $data = stripslashes($data);
@@ -21,18 +23,18 @@ if(isset($_POST['createAppointment'])){
 
     if (empty($program) || empty($course) || empty($date) || empty($time) || empty($price) ) {
     // if (empty($program) || empty($course) || empty($date) || empty($time) || empty($price)) {
-        header("Location: ./createAppointment.php?errorCreate=All fields are required.");
+        header("Location: ../home.php#createAppointment?errorCreate=All fields are required.");
         exit();
     } else {
         if($course == "others") {
             if (empty($course_others)){
-                header("Location: ./createAppointment.php?errorCreate=Specify course name.");
+                header("Location: ../home.php#createAppointment?errorCreate=Specify course name.");
             }  else {
                 if(empty(!$course_others)){
                     $query_existing = "SELECT * FROM reference_code WHERE name = '$course_others'";
                     $sql_retrieve = mysqli_query($connection,$query_existing) OR trigger_error('Query FAILED SQL:$query_create ERROR:'.mysqli_error($connection),E_USER_ERROR );
                         if(mysqli_num_rows($sql_retrieve) > 0){
-                        header("Location: ./createAppointment.php?errorCreate=Course already exists. Choose from the dropdown below.");
+                        header("Location: ../home.php#createAppointment?errorCreate=Course already exists. Choose from the dropdown below.");
                         exit();
                     } else {
                         $query_last_rank = "SELECT name_rank FROM reference_code WHERE id = (SELECT MAX(id) FROM reference_code);";
@@ -49,17 +51,19 @@ if(isset($_POST['createAppointment'])){
 
                         $new_course_id = (int)$retrieve_new_course['id'];
 
-                        $query_insert = "INSERT INTO appointments (program_id, course_id, date, time, price) VALUES ('$program','$new_course_id','$date','$time','$price')";
+                        $query_insert = "INSERT INTO appointments (program_id, course_id, date, time, price,status,tutor_id) VALUES ('$program','$new_course_id','$date','$time','$price',1,'$id')";
                         $sql_insert = mysqli_query($connection,$query_insert) OR trigger_error('Query FAILED SQL:$query_create ERROR:'.mysqli_error($connection),E_USER_ERROR );
-                        header("Location: ./createAppointment.php?successCreate=Successfully created.");
+                        header("Location: ../home?successCreate=Successfully created.#createAppointment");
+
+                        $_SESSION['successCreate'] = "Successfully created.";
                     }
                     
                 }
             }
         }else {
-            $query_insert = "INSERT INTO appointments (program_id, course_id, date, time, price) VALUES ('$program','$course','$date','$time','$price')";
+            $query_insert = "INSERT INTO appointments (program_id, course_id, date, time, price, status,tutor_id) VALUES ('$program','$course','$date','$time','$price',1,'$id')";
             $sql_insert = mysqli_query($connection,$query_insert) OR trigger_error('Query FAILED SQL:$query_create ERROR:'.mysqli_error($connection),E_USER_ERROR );
-            header("Location: ./createAppointment.php?successCreate=Successfully created.");
+            header("Location: ../home?successCreate=Successfully created.#createAppointment");
         } 
 
     }

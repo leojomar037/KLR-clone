@@ -9,7 +9,7 @@ if($_GET['course'] && $_GET['program']){
     ON appointments.tutor_id = users.user_id
     WHERE course_id = ".$_GET['course']." AND program_id = ".$_GET['program']."
     AND status = '1' AND date > CURDATE()
-    ORDER BY first_name ASC"; 
+    ORDER BY tutor_info ASC"; 
     $sql_tutors_courses = $connection->query($query_tutors_courses);
 
     if($sql_tutors_courses->num_rows > 0){

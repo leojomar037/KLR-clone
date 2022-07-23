@@ -56,4 +56,5 @@
 <!-- <script src="js/nav.js"></script> -->
 <!-- script for all role -->
 <script src="js/admin.js"></script>
+<script src="js/appointment.js"></script>
 </html>

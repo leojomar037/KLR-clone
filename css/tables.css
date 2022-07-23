@@ -1,6 +1,7 @@
 .studentTable, .tutorsTable, .subjectsTable, .programsTable {
   padding: 1rem;
   height: calc(90vh - 2rem);
+  z-index: 999999999999999999999;
 }
 
 .studentTable .title, .tutorsTable .title, .subjectsTable .title, .programsTable .title {

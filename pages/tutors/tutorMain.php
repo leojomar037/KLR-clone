@@ -37,6 +37,12 @@
                     <span class="link-name ">Schedules</span>
                 </a>
             </li>
+            <li class="links-hover">
+                <a href=" #createAppointment" class="navigate-site" site="schedule">
+                    <i class="fa-solid fa-users"></i>
+                    <span class="link-name ">Create Appointment</span>
+                </a>
+            </li>
             
          
         </div>
@@ -53,12 +59,12 @@
 </nav>
 
 <main class="main">
+    
     <?php require('./pages/header.php')?>
     <div class="show-page"></div>
     
     <div id="dashboard" class="section">
-    <?php require('./pages/tutors/tutorsDashboard.php')?>
-
+        <?php require('./pages/tutors/tutorsDashboard.php')?>
     </div>
 
     <div id="profile" class="section">
@@ -73,7 +79,8 @@
         <?php require('./pages/tutors/schedule.php')?>
     </div>
 
-    <div id="subjects" class="section">
+    <div id="createAppointment" class="section">
+        <?php require('./pages/tutors/createAppointment.php')?>
     </div>
 
     <div id="programs" class="section">

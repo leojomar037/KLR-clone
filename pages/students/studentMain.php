@@ -29,7 +29,14 @@
             <li class="links-hover">
                 <a href=" #bookAppointment">
                     <i class="fa-solid fa-user"></i>
-                    <span class="link-name ">Profile</span>
+                    <span class="link-name ">bookAppointment</span>
+                    
+                </a>
+            </li>
+            <li class="links-hover">
+                <a href=" #studentsTutor">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="link-name ">studentsTutor</span>
                     
                 </a>
             </li>
@@ -59,6 +66,12 @@
     <div class="section" id="bookAppointment">
         <?php require('./pages/students/bookAppointment.php')?>
     </div>
+    
+    <div class="section" id="studentsTutor">
+        <?php require('./pages/students/studentsTutor.php')?>
+    </div>
+
+    
 </main>
 
 

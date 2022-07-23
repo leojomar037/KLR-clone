@@ -12,11 +12,11 @@ if($_GET['time'] && $_GET['date'] && $_GET['tutor'] && $_GET['course'] && $_GET[
     $time = date('H:i:s',$string_time);
     echo $time;
 
-    $query_price_time = "SELECT DISTINCT price
+    $query_price_time = "SELECT DISTINCT date,price
     FROM appointments
     WHERE time = '$time' AND date = '$date' AND tutor_id = ".$_GET['tutor']." AND course_id = ".$_GET['course']." AND program_id = ".$_GET['program']." 
     AND status = '1' AND date > CURDATE() 
-    ORDER BY date ASC"; 
+    ORDER BY price ASC"; 
 
     echo $query_price_time;
    

@@ -21,7 +21,7 @@
         </thead>
         <tbody>
             <?php 
-            while ($student = mysqli_fetch_array($sql_get_tutorsStudent)){
+            while ($student = mysqli_fetch_array($sql_get_studentsTutor)){
             $btn= false;
                 if($student['status']==2){
                     $status = "Pending";
