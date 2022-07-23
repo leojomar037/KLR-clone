@@ -26,6 +26,7 @@
                             <div class="actual-form">
                                 <div>
                                     <input type="hidden" name="user_id" id="user_id" value="<?php echo $view['user_id'] ?>">
+                                    <input type="hidden" name="role" id="role" value="<?php echo $view['role'] ?>">
                                     <!--First Name-->
                                     <div class="input-wrap">
                                         <input 
@@ -33,9 +34,6 @@
                                             name="first_name" 
                                             id="first_name" 
                                             class="input-field" 
-                                            autocomplete="off" 
-                                            onblur="validateFirstName()"
-                                            autocomplete="off"
                                             value="<?php echo $view['first_name'] ?>"
                                             readonly>
                                         <label>First Name</label>
@@ -49,29 +47,12 @@
                                             id="last_name" 
                                             name="last_name" 
                                             class="input-field" 
-                                            autocomplete="off" 
-                                            onblur="validateLastName()"
                                             value="<?php echo $view['last_name'] ?>"
                                             readonly>
                                         <label>Last Name</label>
                                         <div class="error" id="last_name_error"></div>
                                     </div>
 
-
-                                    <!--Email-->
-                                    <!-- <div class="input-wrap">
-                                            <input 
-                                                type="email" 
-                                                id="regemail" 
-                                                name="regemail" 
-                                                class="input-field" 
-                                                autocomplete="off" 
-                                                onblur="validateRegEmail()" 
-                                                value="<?php echo $view['email'] ?>" 
-                                                readonly/>
-                                            <label>Email</label>
-                                            <div class="error" id="regemail_error"></div>
-                                    </div> -->
 
                                     <!--Gender-->
                                     <div class="input-wrap">

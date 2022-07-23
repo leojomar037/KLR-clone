@@ -35,7 +35,7 @@
                     <td><?php echo $student['email'] ?></td>
                     <td><?php echo $student['mobile_number'] ?></td>
                     <td>
-                        <form action="./inc/actionStudent.php" method="post">
+                        <form action="./inc/action.php" method="post">
                                 <input type="hidden" name="id" id="id" value="<?php echo $student['user_id'] ?>">
                                 <input type="hidden" name="table" id="table" value="students">
                                 <input type="submit" class="btn btn-success" value="View" name="view">
