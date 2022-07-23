@@ -126,8 +126,8 @@
                                         
                                         <?php }else{?>
                                         <option value="" ></option>
-                                        <option value="2">Student</option>
-                                        <option value="3">Tutor</option>
+                                        <option value="2">Tutor</option>
+                                        <option value="3">Student</option>
                                         <?php }?>
                                         <!-- <option value="" ></option>
                                         <option value="2">Student</option>
