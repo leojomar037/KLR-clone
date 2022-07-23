@@ -75,7 +75,7 @@
 
                                     <!--Gender-->
                                     <div class="input-wrap">
-                                        <select name="gender" class="input-field" id="gender">
+                                        <select name="gender" class="input-field" id="gender" disabled>
                                             <option value="" ></option>
                                             <option value="4"<?php echo ($view['gender'] == "4") ? "selected" : null; ?>>Male</option>
                                             <option value="5"<?php echo ($view['gender'] == "5") ? "selected" : null; ?>>Female</option>     
@@ -86,7 +86,7 @@
 
                                     <div class="input-wrap">
                                         <!--https://gist.github.com/didats/8154290-->
-                                        <select name="nationality" class="input-field" id="nationality">
+                                        <select name="nationality" class="input-field" id="nationality" disabled>
                                         <option value=""></option>
                                         <option value="afghan"<?php echo ($view['nationality'] == "afghan") ? "selected" : null; ?> >Afghan</option>
                                         <option value="albanian" <?php echo ($view['nationality'] == "albanian") ? "selected" : null; ?>>Albanian</option>
@@ -285,7 +285,7 @@
                                     </div>
 
                                     <div class="input-wrap">
-                                        <select name="civil_status" class="input-field" id="civil_status">
+                                        <select name="civil_status" class="input-field" id="civil_status" disabled>
                                         <option value=""></option>
                                         <option value="7" <?php echo ($view['civil_status'] == "7") ? "selected" : null; ?>>Single</option>
                                         <option value="8" <?php echo ($view['civil_status'] == "8") ? "selected" : null; ?>>Married</option>
@@ -387,19 +387,20 @@
                                                 class="input-field" 
                                                 onblur="validateAdultEmail()" 
                                                 autocomplete="off" 
-                                                value="<?php echo $view['adult_email'] ?>"/>
-                                            <label class="form-label" for="adult_email">Email<span class="text-danger">*</span></label>
+                                                value="<?php echo $view['adult_email'] ?>"
+                                                readonly/>
+                                            <label class="form-label" for="adult_email">Email</label>
                                             <div class="error" id="adult_email_error"></div>
                                         </div>
 
 
                                         <div class="input-wrap">
-                                            <select name="relation" class="input-field" id="relation" onblur="validateRelation()" autocomplete="off">
+                                            <select name="relation" class="input-field" id="relation" onblur="validateRelation()" autocomplete="off" disabled>
                                                 <option value=""></option>
                                                 <option value="parent" <?php echo ($view['relationship'] == "parent") ? "selected" : null; ?>>Parent</option>
-                                                <option value="guardian" <?php echo ($view['relationship'] == "parent") ? "selected" : null; ?>>Guardian</option>
+                                                <option value="guardian" <?php echo ($view['relationship'] == "guardian") ? "selected" : null; ?>>Guardian</option>
                                             </select>
-                                            <label class="form-label" for="relation">Relation<span class="text-danger">*</span></label>
+                                            <label class="form-label" for="relation">Relation</label>
                                             <div class="error" id="relation_error"></div>
                                         </div>
                                     </div>
