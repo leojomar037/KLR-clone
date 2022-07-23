@@ -15,11 +15,12 @@
             </thead>
             <tbody>
                 <?php 
-                    if($programsCount != 0){
-                        while ($row = mysqli_fetch_array($sql_get_programs)){
+                    if($programs != 0){
+                        // while ($row = mysqli_fetch_array($sql_get_programs)){
+                            foreach ($programs as $program){
                 ?>
                     <tr>
-                        <td><?php echo $row['name'] ?></td>
+                        <td><?php echo $program['name'] ?></td>
                     </tr>
                 <?php 
                         }
