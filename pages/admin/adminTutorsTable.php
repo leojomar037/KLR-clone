@@ -35,7 +35,7 @@
                     <td><?php echo $tutor['email'] ?></td>
                     <td><?php echo $tutor['mobile_number'] ?></td>
                     <td>
-                        <form action="./inc/actionTutor.php" method="post">
+                        <form action="./inc/action.php" method="post">
                                 <input type="hidden" name="id" id="id" value="<?php echo $tutor['user_id'] ?>">
                                 <input type="hidden" name="table" id="table" value="tutors">
                                 <input type="submit" class="btn btn-success" value="View" name="view">
