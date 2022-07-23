@@ -39,7 +39,7 @@ if (isset($_POST['update'])) {
             if($birthdate == ""){
                 $birthdate = '0000-00-00';
             }
-            $query_update = "UPDATE users SET first_name = '$first_name',relationship= '$relation', last_name = '$last_name', gender = '$gender', nationality = '$nationality', civil_status = '$civil_status', 
+            $query_update = "UPDATE users SET first_name = '$first_name', last_name = '$last_name', gender = '$gender', nationality = '$nationality', civil_status = '$civil_status', 
             mobile_number = '$mobile_number', address = '$address', birthdate = '$birthdate' WHERE user_id = '$id'";
             $sql_update = mysqli_query($connection, $query_update) OR trigger_error('Query FAILED! sql:$query_update ERROR: '.mysqli_error($connection), E_USER_ERROR);
     
@@ -67,24 +67,4 @@ if (isset($_POST['update'])) {
     }
 
 };
-
-
-if(isset($_POST['cancel'])){
-    $id = $_POST['id'];
-    $table = $_POST['table'];
-    $query_update_status = "UPDATE appointments SET status = '3' WHERE student_id = '$id'";
-    $sql_update_status = mysqli_query($connection, $query_update_status) OR trigger_error('Query FAILED! sql:$query_update ERROR: '.mysqli_error($connection), E_USER_ERROR);
-
-    echo "<script>alert('Successfully updated!')</script>";
-    echo "<script>window.location.href = '../home#$table'</script>";
-}
-if(isset($_POST['approve'])){
-    $id = $_POST['id'];
-    $table = $_POST['table'];
-    $query_update_status = "UPDATE appointments SET status = '2' WHERE student_id = '$id'";
-    $sql_update_status = mysqli_query($connection, $query_update_status) OR trigger_error('Query FAILED! sql:$query_update ERROR: '.mysqli_error($connection), E_USER_ERROR);
-
-    echo "<script>alert('Successfully updated!')</script>";
-    echo "<script>window.location.href = '../home#$table'</script>";
-}
 ?>
