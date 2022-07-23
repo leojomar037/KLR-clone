@@ -389,7 +389,7 @@
                                                 autocomplete="off" 
                                                 value="<?php echo $view['adult_email'] ?>"
                                                 readonly/>
-                                            <label class="form-label" for="adult_email">Email</label>
+                                            <label class="form-label" for="adult_email">Parent/Guardian Email</label>
                                             <div class="error" id="adult_email_error"></div>
                                         </div>
 
