@@ -1,9 +1,22 @@
-<?php require('./inc/retrieve.php')?>
+<?php require('./inc/retrieve.php');
+require('./inc/loginRetrieve.php');
 
 
-<?php require('./pages/header.php')?>
 
-<div class="dash-content-stud">
+$rowCount =mysqli_num_rows($sql_get_schedStudent);
+// $row = mysqli_fetch_array($sql_get_schedStudent);
+if($rowCount >0){
+    require('./pages/students/schedule.php');
+}
+else{
+?>
+
+
+
+
+
+<div class="studentDashboard">
+<div class="dash-content-stud ">
     <div class="overview">
         <div class="title">
             <i class="fa-solid fa-gauge-high"></i>
@@ -17,7 +30,7 @@
                     <span class="text-course elem">Elementary</span>
                 </div>
                 
-                <span class="text-enroll">Click to enroll</span>
+                <a href="#bookAppointment"><span class="text-enroll">Click to enroll</span></a>
 
             </div>
             <div class="box box2">
@@ -26,7 +39,7 @@
                     <span class="text-course">Jr. High School</span>
                 </div>
                 
-                <span class="text-enroll">Click to enroll</span>
+                <a href="#bookAppointment"><span class="text-enroll">Click to enroll</span></a>
 
             </div>
             <div class="box box3">
@@ -35,7 +48,7 @@
                     <span class="text-course">Sr. High School</span>
                 </div>
                 
-                <span class="text-enroll">Click to enroll</span>
+                <a href="#bookAppointment"><span class="text-enroll">Click to enroll</span></a>
             </div>
             <div class="box box4">
                 <div class="content">
@@ -43,7 +56,7 @@
                     <span class="text-course college">College</span>
                 </div>
                 
-                <span class="text-enroll">Click to enroll</span>
+                <a href="#bookAppointment"><span class="text-enroll">Click to enroll</span></a>
 
             </div>
         </div>
@@ -56,3 +69,8 @@
     </div>
 
 </div>
+
+</div>
+
+
+<?php }?>

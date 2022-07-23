@@ -7,11 +7,10 @@
 }
 
 .editProfile{
-
     width: 100%;
     min-height: 90vh;
     overflow: hidden;
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +23,6 @@
         // border: 0.1rem #f66e23 solid;
         background-color: #fff;
         border-radius: 1rem;
-        box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
 
             .inner-box{
                 position: absolute;
@@ -75,7 +73,6 @@
                             h2 {
                                 font-size: 2.1rem;
                                 color: #151111;
-                                margin-top: 1rem;
                             }
                         }
                         .actual-form{

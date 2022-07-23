@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="css/tutorsdash.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/admindashboard.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="css/appointment.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="css/tutorDashboard.css?v=<?php echo time(); ?>">
+    
+    
+    
 
     <!-- Fontawesome icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">

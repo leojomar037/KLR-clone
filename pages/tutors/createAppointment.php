@@ -1,5 +1,5 @@
 
-    <div>
+    <div class="bookAppointment">
         <div class="box">
             <div class="inner-box">
                 <div class="forms-wrap">

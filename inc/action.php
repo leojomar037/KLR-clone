@@ -28,10 +28,6 @@
     } 
 
     if(isset($_POST['closeView'])){
-<<<<<<< HEAD:inc/actionStudent.php
-        echo "<script>window.location.href = '../home#students'</script>";
-=======
-        $id = $_POST['id'];
         $role = $_POST['role'];
         if ($role == 2){
             echo "<script>window.location.href = '../home#tutors'</script>";
@@ -39,7 +35,6 @@
             echo "<script>window.location.href = '../home#students'</script>";
         }
         
->>>>>>> 2ee01243a57cf2d4a959480c827a20288badcceb:inc/action.php
     }
 
 

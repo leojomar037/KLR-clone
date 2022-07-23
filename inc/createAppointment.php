@@ -23,18 +23,18 @@ if(isset($_POST['createAppointment'])){
 
     if (empty($program) || empty($course) || empty($date) || empty($time) || empty($price) ) {
     // if (empty($program) || empty($course) || empty($date) || empty($time) || empty($price)) {
-        header("Location: ../home.php#createAppointment?errorCreate=All fields are required.");
+        header("Location: ../home?errorCreate=All fields are required.#createAppointment");
         exit();
     } else {
         if($course == "others") {
             if (empty($course_others)){
-                header("Location: ../home.php#createAppointment?errorCreate=Specify course name.");
+                header("Location: ../home?errorCreate=Specify course name.#createAppointment");
             }  else {
                 if(empty(!$course_others)){
                     $query_existing = "SELECT * FROM reference_code WHERE name = '$course_others'";
                     $sql_retrieve = mysqli_query($connection,$query_existing) OR trigger_error('Query FAILED SQL:$query_create ERROR:'.mysqli_error($connection),E_USER_ERROR );
                         if(mysqli_num_rows($sql_retrieve) > 0){
-                        header("Location: ../home.php#createAppointment?errorCreate=Course already exists. Choose from the dropdown below.");
+                        header("Location: ../home?errorCreate=Course already exists. Choose from the dropdown below.#createAppointment");
                         exit();
                     } else {
                         $query_last_rank = "SELECT name_rank FROM reference_code WHERE id = (SELECT MAX(id) FROM reference_code);";

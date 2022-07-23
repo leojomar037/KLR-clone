@@ -2,8 +2,6 @@
     padding: 1rem;
     height: calc(90vh - 2rem);
 
-    z-index: 999999999999999999999;
-
     .title{
         display: flex;
         align-items: center;
@@ -26,6 +24,9 @@
         overflow-y: scroll;
         height: 90%;
         table{
+            th{
+                color: white;
+            }
             thead{
                 position: sticky;
                 width: 100%;

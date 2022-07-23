@@ -11,7 +11,7 @@
   width: 100%;
   min-height: 90vh;
   overflow: hidden;
-  padding: 2rem;
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,8 +29,6 @@
   height: calc(90vh - 2rem);
   background-color: #fff;
   border-radius: 1rem;
-  -webkit-box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
-          box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
 }
 
 .editProfile .box .inner-box {
@@ -93,7 +91,6 @@
 .editProfile .box .inner-box .forms-wrap .sign-in-form .heading h2 {
   font-size: 2.1rem;
   color: #151111;
-  margin-top: 1rem;
 }
 
 .editProfile .box .inner-box .forms-wrap .sign-in-form .actual-form {

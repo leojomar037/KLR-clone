@@ -37,7 +37,7 @@ nav {
 }
 
 nav.close {
-    width:5vw;
+    width:6vw;
 }
 
 nav .logo-name {
@@ -51,7 +51,7 @@ nav .logo-image {
 }
 
 nav .logo-image img {
-    width: 2.8rem;
+    width: 3rem;
     left: 0;
     object-fit: cover;
     border-radius: 50%;

@@ -65,6 +65,7 @@
     
     <div id="dashboard" class="section">
         <?php require('./pages/tutors/tutorsDashboard.php')?>
+
     </div>
 
     <div id="profile" class="section">

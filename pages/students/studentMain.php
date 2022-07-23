@@ -29,14 +29,13 @@
             <li class="links-hover">
                 <a href=" #bookAppointment">
                     <i class="fa-solid fa-user"></i>
-                    <span class="link-name ">bookAppointment</span>
-                    
+                    <span class="link-name ">Appointment</span>
                 </a>
             </li>
             <li class="links-hover">
                 <a href=" #studentsTutor">
                     <i class="fa-solid fa-user"></i>
-                    <span class="link-name ">studentsTutor</span>
+                    <span class="link-name ">History</span>
                     
                 </a>
             </li>
@@ -56,6 +55,8 @@
 </nav>
 
 <main class="main">
+<?php require('./pages/header.php')?>
+
     <div class="section" id="dashboard">
         <?php require('./pages/students/studentDashboard.php')?>
     </div> 
@@ -66,7 +67,7 @@
     <div class="section" id="bookAppointment">
         <?php require('./pages/students/bookAppointment.php')?>
     </div>
-    
+
     <div class="section" id="studentsTutor">
         <?php require('./pages/students/studentsTutor.php')?>
     </div>

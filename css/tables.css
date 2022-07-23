@@ -1,7 +1,6 @@
 .studentTable, .tutorsTable, .subjectsTable, .programsTable {
   padding: 1rem;
   height: calc(90vh - 2rem);
-  z-index: 999999999999999999999;
 }
 
 .studentTable .title, .tutorsTable .title, .subjectsTable .title, .programsTable .title {
@@ -31,6 +30,10 @@
   overflow: hidden;
   overflow-y: scroll;
   height: 90%;
+}
+
+.studentTable .box table th, .tutorsTable .box table th, .subjectsTable .box table th, .programsTable .box table th {
+  color: white;
 }
 
 .studentTable .box table thead, .tutorsTable .box table thead, .subjectsTable .box table thead, .programsTable .box table thead {

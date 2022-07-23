@@ -1,29 +1,27 @@
 .main .dash-content-tutors {
-    padding-top: 0.625rem;
     height: 90vh;
+    padding: 1rem;
 }
 
 .dash-content-tutors .title {
     display: flex;
     align-items: center;
-    margin: 4.375rem 0 1.875rem 0;
+    margin-bottom: 2rem;
 }
 
 .dash-content-tutors .title i {
     position: relative;
-    height: 2.188rem;
-    width: 2.188rem;
     background-color: #4D40CC;
     border-radius: 6px;
     color: var(--title-icon-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .dash-content-tutors .title .text {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 500;
     color: var(--text-color);
     margin-left: 0.625rem;

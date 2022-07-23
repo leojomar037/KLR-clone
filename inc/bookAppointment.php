@@ -20,7 +20,7 @@ if(isset($_POST['bookAppointment'])){
 
 
     if (empty($program) || empty($course) || empty($date) || empty($time) || empty($price)) {
-        header("Location: ./bookAppointment.php?errorBook=All fields are required.");
+        header("Location: ../home?errorBook=All fields are required.#bookAppointment");
         exit();
     } else {
         $query_update_appointment = "UPDATE appointments SET status = '2',student_id = '$id' WHERE program_id = '$program' AND course_id = '$course' AND tutor_id = '$tutor' AND date ='$date' AND time = '$time' AND price = '$price'";
