@@ -77,20 +77,6 @@
                                             <div class="error" id="regemail_error"></div>
                                     </div>
 
-                                    <!--Password
-                                    <div class="input-wrap">
-                                        <input 
-                                            type="password" 
-                                            id="regpassword" 
-                                            name="regpassword" 
-                                            class="input-field" 
-                                            autocomplete="off" 
-                                            onblur="validateRegPassword()"
-                                            oninput="validateRegPasswordLength()" />
-                                        <label>Password</label>
-                                        <div class="error" id="regpassword_error"></div>
-                                    </div>
-                                    -->
                                     <!--Gender-->
                                     <div class="input-wrap">
                                         <select name="gender" class="input-field" id="gender">
