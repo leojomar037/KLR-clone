@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    font-size: 2.5vh;
 }
 
 
@@ -13,7 +14,7 @@
 
 main {
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
     overflow: hidden;
     background-color: #4D40CC;
     padding: 2rem;
@@ -25,14 +26,15 @@ main {
 .box {
     position: relative;
     width: 100%;
-    max-width: 1020px;
-    height: 800px;
+    height: 95vh;
     background-color: #fff;
     border-radius: 3.3rem;
+
     box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
 }
 
 .inner-box {
+
     position: absolute;
     width: calc(100% - 4.1rem);
     height: calc(100% - 4.1rem);
@@ -51,22 +53,21 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     transition: 0.8s ease-in-out;
+    
 }
 
 form {
-    max-width: 260px;
+    max-width: 30vw;
     width: 100%;
     margin: 0 auto;
-    height: 100%;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     grid-column: 1/2;
     grid-row: 1/2;
+    justify-content: center;
     transition: opacity 0.2s 0.4s;
-}
-
-.sign-in-form {
-    padding-top: 150px;
+    padding: 1rem;
 }
 
 form.sign-up-form {
@@ -125,16 +126,16 @@ form.sign-up-form {
 
 .input-wrap {
     position: relative;
-    height: 37px;
-    margin-bottom: 2.2rem;
+    height: 2.5rem;
+    margin-bottom: 1.5rem;
     /* margin-top: 15px; */
 }
 
 .error {
     position: absolute;
     color: red;
-    bottom: -20px;
-    font-size: 10px;
+    bottom: -1rem;
+    font-size: .8rem;
     margin: 0;
     padding: 0;
 }
@@ -148,7 +149,7 @@ form.sign-up-form {
     outline: none;
     border-bottom: 1px solid #bbb;
     padding: 0;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #151111;
     transition: 0.4s;
 }
@@ -235,8 +236,8 @@ main.sign-up-mode .carousel {
 
 .carousel {
     position: absolute;
-    margin-top: 100px;
-    height: 70%;
+    margin-top: 1rem;
+    height: 90%;
     width: 55%;
     left: 45%;
     top: 0;
@@ -246,7 +247,6 @@ main.sign-up-mode .carousel {
     display: grid;
     grid-template-rows: auto 1fr;
     padding-bottom: 2rem;
-    overflow: hidden;
 }
 
 .images-wrapper {
@@ -289,9 +289,9 @@ main.sign-up-mode .carousel {
 }
 
 .text-wrap {
-    max-height: 2.2rem;
+    max-height: 2.5rem;
     overflow: hidden;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0rem;
 }
 
 .text-group {
@@ -303,7 +303,7 @@ main.sign-up-mode .carousel {
 }
 
 .text-group h2 {
-    line-height: 2.2rem;
+    line-height: 1.8rem;
     font-weight: 600;
     font-size: 1.6rem;
 }
