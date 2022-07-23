@@ -134,12 +134,15 @@ form.sign-up-form {
 .error {
     position: absolute;
     color: red;
-    bottom: -1rem;
-    font-size: .8rem;
+    bottom: -1.3rem;
+    font-size: .7rem;
     margin: 0;
     padding: 0;
 }
+.error i {
+    font-size: .5rem;
 
+}
 .input-field {
     position: absolute;
     width: 100%;
@@ -180,7 +183,7 @@ label {
 
 .input-field.active+label {
     font-size: 0.75rem;
-    top: -2px;
+    top: .4rem;
 }
 
 .sign-btn {
