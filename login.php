@@ -68,6 +68,29 @@
     <script src="js/app.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <?php
+        if (isset($_GET['error'])){?>
+            <script>
+                swal({
+                title: "<?php echo $_GET['error']; ?>",
+                // text: "You clicked the button!",
+                icon: "error",
+                button: "Close",
+                });
+            </script>
+        <?php }?>
+    <?php
+        if (isset($_GET['success'])){?>
+            <script>
+                swal({
+                title: "<?php echo $_GET['success']; ?>",
+                // text: "You clicked the button!",
+                icon: "success",
+                button: "Close",
+                });
+            </script>
+    <?php }?>
     
 </body>
 
