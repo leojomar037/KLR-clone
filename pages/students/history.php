@@ -73,5 +73,18 @@
     </div>
 </div>
 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <?php
+        if (isset($_GET['successComplete'])){?>
+            <script>
+                swal({
+                title: "<?php echo $_GET['successComplete']; ?>",
+                icon: "success",
+                button: "Close",
+                });
+            </script>
+    <?php }?>
+
     
 

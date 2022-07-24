@@ -113,7 +113,7 @@ if(isset($_POST['approve'])){
     $query_update_status = "UPDATE appointments SET status = '3' WHERE appointment_id = '$id'";
     $sql_update_status = mysqli_query($connection, $query_update_status) OR trigger_error('Query FAILED! sql:$query_update ERROR: '.mysqli_error($connection), E_USER_ERROR);
 
-    echo "<script>alert('Successfully updated!')</script>";
+    header("Location: ../home.php?successApprove=Approved!#students");
     echo "<script>window.location.href = '../home#$table'</script>";
 }
 if(isset($_POST['completed'])){
@@ -122,7 +122,7 @@ if(isset($_POST['completed'])){
     $query_update_status = "UPDATE appointments SET status = '5' WHERE appointment_id = '$id'";
     $sql_update_status = mysqli_query($connection, $query_update_status) OR trigger_error('Query FAILED! sql:$query_update ERROR: '.mysqli_error($connection), E_USER_ERROR);
 
-    echo "<script>alert('Successfully updated!')</script>";
+    header("Location: ../home.php?successComplete=Successfully completed.#history");
     echo "<script>window.location.href = '../home#$table'</script>";
 }
 ?>

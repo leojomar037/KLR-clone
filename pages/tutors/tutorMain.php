@@ -44,13 +44,11 @@
                 </a>
             </li>
             <li class="links-hover">
-                <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <i class="fa-solid fa-clock-rotate-left"></i>
+                <a type="button" data-bs-toggle="modal" data-bs-target="#addReview">
+                    <i class="fa-solid fa-pen"></i>
                     <span class="link-name ">Add Review</span>
-                    
                 </a>
             </li>
-            
             
          
         </div>
