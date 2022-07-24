@@ -56,10 +56,11 @@
                     <td><?php echo $student['time'] ?></td>
                     <td class="<?php echo $color?>"><?php echo $status ?></td>
                     <td>
-                        <form action="./inc/update.php" method="post">
+                        <form action="./inc/update.php" method="post" name="action_appointment" id="action_appointment">
                                 <input type="hidden" name="id" id="id" value="<?php echo $student['appointment_id'] ?>">
                                 <input type="hidden" name="table" id="table" value="students">
                                 <input type="submit" class="btn btn-success" value="Cancel" name="cancel" <?php if(!$btn)echo "disabled"?> onclick="return confirm('Are you sure you want to delete this record?')">
+                                <!-- <input type="submit" class="btn btn-success" value="Cancel" name="cancel" <?php if(!$btn)echo "disabled"?> onclick="return confirmCancel()"> -->
                                 <input type="submit" class="btn btn-danger" value="Approve" name="approve" <?php if(!$btn)echo "disabled"?> >
                         </form>
                     </td>
@@ -71,5 +72,59 @@
     </div>
 </div>
 
-    
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    <!-- <script>
+    function confirmCancel(){
+    event.preventDefault();
+        var form = this;
+        event.target.value;
+        swal({
+            title: "Are you sure?",
+            text: "Action cannot be undone",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, cancel it!",
+            cancelButtonText: "No, please!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        }).then((willDelete) => {
+               if (willDelete) {
+                        document.form.submit();
+
+               } else {
+                        swal("Your imaginary file is safe!");
+           }
+        })
+    }
+    </script> -->
+       
+
+    <?php
+        if (isset($_GET['successCancel'])){?>
+            <script>
+                swal({
+                title: "<?php echo $_GET['successCancel']; ?>",
+                // text: "You clicked the button!",
+                icon: "success",
+                button: "Close",
+                });
+            </script>
+    <?php }?>
+
+
+    <?php
+        if (isset($_GET['successApprove'])){?>
+            <script>
+                swal({
+                title: "<?php echo $_GET['successApprove']; ?>",
+                // text: "You clicked the button!",
+                icon: "success",
+                button: "Close",
+                });
+            </script>
+    <?php }?>
+
 
