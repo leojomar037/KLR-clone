@@ -20,9 +20,7 @@ if (isset($_POST['update'])) {
     $birthdate = $_POST['birthdate'];
    
     $adult_name = $_POST['adult_name'];
-    $adult_number = $_POST['adult_number'];
     $adult_email = $_POST['adult_email'];
-    $relation = $_POST['relation'];
 
 
     $img = $_FILES['profile']['name'];
@@ -35,14 +33,11 @@ if (isset($_POST['update'])) {
     $img_upload_path = '../images/profile/'.$new_img;
 
     $profile = $new_img;
-    // var_dump($img_upload_path);
-    // var_dump($img_tmp_name);
-    // // die;
 
     if (empty($first_name) || empty($last_name)) {
         header("Location: ../home.php?errorUpdate=All fields required.#profile");
     } else {
-        if (empty(!$adult_name) || empty(!$adult_number) || empty(!$adult_email) || empty(!$relation)){
+        if (empty(!$adult_name) || empty(!$adult_email)){
             if($gender == ""){
                 $gender = 6; 
             }
@@ -92,7 +87,6 @@ if(isset($_POST['cancel'])){
     $query_update_status = "UPDATE appointments SET status = '4' WHERE appointment_id = '$id'";
     $sql_update_status = mysqli_query($connection, $query_update_status) OR trigger_error('Query FAILED! sql:$query_update ERROR: '.mysqli_error($connection), E_USER_ERROR);
 
-    // echo "<script>alert('Successfully updated!')</script>";
     header("Location: ../home.php?successCancel=Successfully cancelled.#students");
     echo "<script>window.location.href = '../home#$table'</script>";
 }
