@@ -44,7 +44,6 @@
                                             placeholder="Upload photo"
                                             >
                                     <!-- <label>Profile</label> -->
-                                    <div class="error" id="first_name_error"></div>
                                     </div>
                                     <!--First Name-->
                                     <div class="input-wrap">

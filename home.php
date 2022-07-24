@@ -29,7 +29,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!-- Bootrap icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" integrity="sha384-eoTu3+HydHRBIjnCVwsFyCpUDZHZSFKEJD0mc3ZqSBSb6YhZzRHeiomAUWCstIWo" crossorigin="anonymous">
-   
     <!-- JQUERY  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -61,5 +60,9 @@
 <!-- <script src="js/nav.js"></script> -->
 <!-- script for all role -->
 <script src="js/admin.js"></script>
+<script src="js/createAppointment.js"></script>
 <script src="js/appointment.js"></script>
+<script src="js/app.js"></script>
+<!-- <script src="js/edit.js"></script> -->
+
 </html>

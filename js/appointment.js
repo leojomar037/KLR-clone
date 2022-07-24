@@ -1,4 +1,24 @@
+        
+        const inputsReg = document.querySelectorAll(".input-field");
 
+
+        inputsReg.forEach((inp) => {
+        
+        if (inp.value !== ""){
+            return  inp.classList.add("active");
+        }
+        inp.addEventListener("focus", () => {
+            inp.classList.add("active")
+        });
+        inp.addEventListener("blur", () => {
+            if (inp.value !== "") return;
+            inp.classList.remove("active");
+        });
+        
+        });
+        
+        
+        
         let program = document.getElementById("program");
         let program_error = document.getElementById("program_error");
         let course = document.getElementById("course");
@@ -26,7 +46,7 @@
         
         
        
-        const checkRequired = (inputDiv, errorDiv, fieldEntry) => {
+        const checkRequiredAppointment= (inputDiv, errorDiv, fieldEntry) => {
             if(inputDiv.value === ""){
                 inputDiv.style.borderBottom = "2px solid red";
                 errorDiv.innerHTML = "<i class='bi bi-exclamation-circle-fill'></i>" + ` Please provide ${fieldEntry}.`
@@ -39,11 +59,11 @@
         };        
 
             let validateProgram = () => {
-                checkRequired(program, program_error, "program");
+                checkRequiredAppointment(program, program_error, "program");
             }
 
             let validateCourse = () => {
-                checkRequired(course, course_error, "course");
+                checkRequiredAppointment(course, course_error, "course");
             }
 
             let validateDate = () => {
@@ -66,11 +86,11 @@
             }
 
             let validateTime = () => {
-                checkRequired(time, time_error, "time");
+                checkRequiredAppointment(time, time_error, "time");
             }
 
             let validatePrice = () => {
-                checkRequired(price, price_error, "price");
+                checkRequiredAppointment(price, price_error, "price");
             }
 
 
