@@ -24,6 +24,21 @@ if (isset($_POST['update'])) {
     $adult_email = $_POST['adult_email'];
     $relation = $_POST['relation'];
 
+
+    $img = $_FILES['profile']['name'];
+    $img_tmp_name = $_FILES['profile']['tmp_name'];
+
+    $img_ex = pathinfo($img,PATHINFO_EXTENSION);
+    $img_ex_lc = strtolower($img_ex);
+    $new_img = uniqid("IMG-",true).'.'.$img_ex_lc;
+
+    $img_upload_path = '../images/profile/'.$new_img;
+
+    $profile = $new_img;
+    // var_dump($img_upload_path);
+    // var_dump($img_tmp_name);
+    // // die;
+
     if (empty($first_name) || empty($last_name)) {
         header("Location: ../home.php?errorUpdate=All fields required.#profile");
     } else {
@@ -40,9 +55,10 @@ if (isset($_POST['update'])) {
                 $birthdate = '0000-00-00';
             }
             $query_update = "UPDATE users SET first_name = '$first_name', last_name = '$last_name', gender = '$gender', nationality = '$nationality', civil_status = '$civil_status', 
-            mobile_number = '$mobile_number', address = '$address', birthdate = '$birthdate' WHERE user_id = '$id'";
+            mobile_number = '$mobile_number', address = '$address', birthdate = '$birthdate',profile_pic = '$profile' WHERE user_id = '$id'";
             $sql_update = mysqli_query($connection, $query_update) OR trigger_error('Query FAILED! sql:$query_update ERROR: '.mysqli_error($connection), E_USER_ERROR);
-    
+            move_uploaded_file($img_tmp_name,$img_upload_path);
+            
             header("Location: ../home.php?successUpdate=Successfully updated.#profile");
         } else {
             if($gender == ""){
@@ -57,9 +73,10 @@ if (isset($_POST['update'])) {
                 $birthdate = '0000-00-00';
             }
             $query_update = "UPDATE users SET first_name = '$first_name', last_name = '$last_name', gender = '$gender', nationality = '$nationality', civil_status = '$civil_status', 
-            mobile_number = '$mobile_number', address = '$address', birthdate = '$birthdate' WHERE user_id = '$id'";
+            mobile_number = '$mobile_number', address = '$address', birthdate = '$birthdate',profile_pic = '$profile' WHERE user_id = '$id'";
             $sql_update = mysqli_query($connection, $query_update) OR trigger_error('Query FAILED! sql:$query_update ERROR: '.mysqli_error($connection), E_USER_ERROR);
-    
+            move_uploaded_file($img_tmp_name,$img_upload_path);
+            
             header("Location: ../home.php?successUpdate=Successfully updated.#profile");
         }
         

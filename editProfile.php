@@ -23,7 +23,7 @@
             <div class="box">
                 <div class="inner-box">
                     <div class="forms-wrap">
-                        <form action="./inc/update.php" class="sign-in-form" method="post" autocomplete="off">
+                        <form action="./inc/update.php" class="sign-in-form" method="post" autocomplete="off" enctype="multipart/form-data">
                             <div class="heading">
                                 <h2>Edit Profile</h2>
                             </div>
@@ -32,6 +32,19 @@
                                 <div>
 
                                     <input type="hidden" name="user_id" id="user_id" value="<?php echo $row['user_id'] ?>">
+
+                                    <label>Profile</label>
+                                    <div class="input-wrap">
+                                        <input 
+                                            type="file" 
+                                            name="profile" 
+                                            id="profile" 
+                                            class="input-field" 
+                                            autocomplete="off"
+                                            >
+                                       
+                                        <div class="error" id="first_name_error"></div>
+                                    </div>
                                     <!--First Name-->
                                     <div class="input-wrap">
                                         <input 

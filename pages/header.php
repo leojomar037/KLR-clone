@@ -12,7 +12,7 @@
 
 <div class="top">
     <i class="bi bi-filter-left sidebar-toggle"></i>
-    <img src="images/richae.jpg" alt="">
+    <img src="images/profile/<?php echo $_SESSION['profile_pic'] ?>" alt="">
     <div class="details">
         <span class="name">Welcome <?php echo $_SESSION['first_name']?></span>
         <span class="role"><?php echo $role ;?></span>

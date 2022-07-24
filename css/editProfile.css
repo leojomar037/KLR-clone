@@ -9,8 +9,9 @@
 
 .editProfile {
   width: 100%;
-  min-height: 90vh;
+  height: 90vh;
   overflow: hidden;
+  overflow-y: scroll;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
