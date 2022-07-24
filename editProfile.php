@@ -63,7 +63,7 @@
 
 
                                     <!--Email-->
-                                    <div class="input-wrap">
+                                    <!-- <div class="input-wrap">
                                             <input 
                                                 type="email" 
                                                 id="regemail" 
@@ -75,7 +75,7 @@
                                                 readonly/>
                                             <label>Email</label>
                                             <div class="error" id="regemail_error"></div>
-                                    </div>
+                                    </div> -->
 
                                     <!--Gender-->
                                     <div class="input-wrap">
@@ -300,12 +300,8 @@
                                         <label class="form-label" for="civil_status">Civil Status</label>
                                     </div>
 
-                                    
-                                </div>
-                                <div>
-
-                                    <!--Mobile Number-->
-                                    <div class="input-wrap">
+                                     <!--Mobile Number-->
+                                     <div class="input-wrap">
                                         <input 
                                             type="text" 
                                             name="mobile_number" 
@@ -316,6 +312,12 @@
                                             value="<?php echo $row['mobile_number'] ?>"/>
                                         <label class="form-label" for="mobile_number">Mobile Number</label>
                                     </div>
+
+                                    
+                                </div>
+                                <div>
+
+                                   
 
                                     <!--Complete Address-->
                                     <div class="input-wrap">
@@ -424,8 +426,30 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
-
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <?php
+        if (isset($_GET['errorUpdate'])){?>
+            <script>
+                swal({
+                title: "<?php echo $_GET['errorUpdate']; ?>",
+                // text: "You clicked the button!",
+                icon: "error",
+                button: "Close",
+                });
+            </script>
+        <?php }?>
+    <?php
+        if (isset($_GET['successUpdate'])){?>
+            <script>
+                swal({
+                title: "<?php echo $_GET['successUpdate']; ?>",
+                // text: "You clicked the button!",
+                icon: "success",
+                button: "Close",
+                });
+            </script>
+    <?php }?>
+    
 
 
 
