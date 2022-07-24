@@ -70,10 +70,22 @@
     
      //for appointments (create appointment) 
     //get courses 
-    $query_get_courses ="SELECT * FROM reference_code WHERE group_name = 'course' ORDER BY name ASC";
+    $query_get_courses ="SELECT * FROM reference_code 
+    WHERE group_name = 'course' 
+    ORDER BY name ASC";
     $sql_get_courses = $connection->query($query_get_courses);
     if($sql_get_courses->num_rows> 0){
       $courses= mysqli_fetch_all($sql_get_courses, MYSQLI_ASSOC);
+    }
+
+    //get appointments
+    $query_get_appointments = "SELECT * FROM appointments 
+    LEFT JOIN users 
+    ON appointments.tutor_id = users.user_id
+    ORDER BY date DESC";
+    $sql_get_appointments = $connection->query($query_get_appointments);
+    if($sql_get_appointments->num_rows > 0){
+      $appointments = mysqli_fetch_all($sql_get_appointments, MYSQLI_ASSOC);
     }
 
 
