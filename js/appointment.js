@@ -1,5 +1,5 @@
         
-        const inputsReg = document.querySelectorAll(".input-field");
+        let inputsReg = document.querySelectorAll(".input-field");
 
 
         inputsReg.forEach((inp) => {
@@ -23,6 +23,8 @@
         let program_error = document.getElementById("program_error");
         let course = document.getElementById("course");
         let course_error = document.getElementById("course_error");
+        let tutor = document.getElementById("tutor");
+        let tutor_error = document.getElementById("tutor_error");
         let date = document.getElementById("date");
         let date_error = document.getElementById("date_error");
         let time = document.getElementById("time");
@@ -64,6 +66,10 @@
 
             let validateCourse = () => {
                 checkRequiredAppointment(course, course_error, "course");
+            }
+
+            let validateTutor = () => {
+                checkRequiredAppointment(tutor, tutor_error, "tutor");
             }
 
             let validateDate = () => {
