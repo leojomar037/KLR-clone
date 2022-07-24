@@ -28,13 +28,13 @@
             </li>
             <li class="links-hover">
                 <a href=" #bookAppointment">
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-calendar"></i>
                     <span class="link-name ">Appointment</span>
                 </a>
             </li>
             <li class="links-hover">
                 <a href=" #studentsTutor">
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-clock-rotate-left"></i>
                     <span class="link-name ">History</span>
                     
                 </a>

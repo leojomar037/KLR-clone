@@ -33,13 +33,13 @@
             </li> 
             <li class="links-hover">
                 <a href=" #schedule" class="navigate-site" site="schedule">
-                    <i class="fa-solid fa-users"></i>
+                    <i class="fa-solid fa-calendar"></i>
                     <span class="link-name ">Schedules</span>
                 </a>
             </li>
             <li class="links-hover">
                 <a href=" #createAppointment" class="navigate-site" site="schedule">
-                    <i class="fa-solid fa-users"></i>
+                    <i class="fa-solid fa-calendar-plus"></i>
                     <span class="link-name ">Create Appointment</span>
                 </a>
             </li>
