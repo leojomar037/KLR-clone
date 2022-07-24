@@ -33,7 +33,7 @@
 
                                     <input type="hidden" name="user_id" id="user_id" value="<?php echo $row['user_id'] ?>">
 
-                                    <label>Profile</label>
+                                    
                                     <div class="input-wrap">
                                         <input 
                                             type="file" 
@@ -41,9 +41,10 @@
                                             id="profile" 
                                             class="input-field" 
                                             autocomplete="off"
+                                            placeholder="Upload photo"
                                             >
-                                       
-                                        <div class="error" id="first_name_error"></div>
+                                    <!-- <label>Profile</label> -->
+                                    <div class="error" id="first_name_error"></div>
                                     </div>
                                     <!--First Name-->
                                     <div class="input-wrap">
@@ -74,22 +75,6 @@
                                         <div class="error" id="last_name_error"></div>
                                     </div>
 
-
-                                    <!--Email-->
-                                    <!-- <div class="input-wrap">
-                                            <input 
-                                                type="email" 
-                                                id="regemail" 
-                                                name="regemail" 
-                                                class="input-field" 
-                                                autocomplete="off" 
-                                                onblur="validateRegEmail()" 
-                                                value="<?php echo $row['email'] ?>" 
-                                                readonly/>
-                                            <label>Email</label>
-                                            <div class="error" id="regemail_error"></div>
-                                    </div> -->
-
                                     <!--Gender-->
                                     <div class="input-wrap">
                                         <select name="gender" class="input-field" id="gender">
@@ -101,9 +86,9 @@
 
                                     </div>
 
-                                    <div class="input-wrap">
+                                    <!-- <div class="input-wrap"> -->
                                         <!--https://gist.github.com/didats/8154290-->
-                                        <select name="nationality" class="input-field" id="nationality">
+                                        <!-- <select name="nationality" class="input-field" id="nationality">
                                         <option value=""></option>
                                         <option value="afghan"<?php echo ($row['nationality'] == "afghan") ? "selected" : null; ?> >Afghan</option>
                                         <option value="albanian" <?php echo ($row['nationality'] == "albanian") ? "selected" : null; ?>>Albanian</option>
@@ -299,7 +284,7 @@
                                         <option value="zimbabwean"  <?php echo ($row['nationality'] == "zimbabwean") ? "selected" : null; ?>>Zimbabwean</option>
                                     </select>
                                         <label class="form-label" for="nationality">Nationality</label>
-                                    </div>
+                                    </div> -->
 
                                     <div class="input-wrap">
                                         <select name="civil_status" class="input-field" id="civil_status">
@@ -313,8 +298,11 @@
                                         <label class="form-label" for="civil_status">Civil Status</label>
                                     </div>
 
-                                     <!--Mobile Number-->
-                                     <div class="input-wrap">
+                                </div>
+                                <div>
+
+                                  <!--Mobile Number-->
+                                  <div class="input-wrap">
                                         <input 
                                             type="text" 
                                             name="mobile_number" 
@@ -325,12 +313,6 @@
                                             value="<?php echo $row['mobile_number'] ?>"/>
                                         <label class="form-label" for="mobile_number">Mobile Number</label>
                                     </div>
-
-                                    
-                                </div>
-                                <div>
-
-                                   
 
                                     <!--Complete Address-->
                                     <div class="input-wrap">
@@ -380,20 +362,6 @@
                                         <div class="input-wrap">
                                             <input 
                                                 type="text" 
-                                                name="adult_number" 
-                                                id="adult_number" 
-                                                class="input-field" 
-                                                onblur="validateAdultNumber()" 
-                                                autocomplete="off"
-                                                value="<?php echo $row['adult_number'] ?>" />
-                                            <label class="form-label" for="adult_number">Contact number<span class="text-danger">*</span></label>
-                                            <div class="error" id="adult_number_error"></div>
-                                        </div>
-
-
-                                        <div class="input-wrap">
-                                            <input 
-                                                type="text" 
                                                 name="adult_email" 
                                                 id="adult_email" 
                                                 class="input-field" 
@@ -405,15 +373,6 @@
                                         </div>
 
 
-                                        <div class="input-wrap">
-                                            <select name="relation" class="input-field" id="relation" onblur="validateRelation()" autocomplete="off">
-                                                <option value=""></option>
-                                                <option value="parent" <?php echo ($row['relationship'] == "parent") ? "selected" : null; ?>>Parent</option>
-                                                <option value="guardian" <?php echo ($row['relationship'] == "parent") ? "selected" : null; ?>>Guardian</option>
-                                            </select>
-                                            <label class="form-label" for="relation">Relation<span class="text-danger">*</span></label>
-                                            <div class="error" id="relation_error"></div>
-                                        </div>
                                     </div>
 
                                     
