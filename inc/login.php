@@ -27,6 +27,7 @@
                 $_SESSION['role'] = $mysql_array['role'];
                 $_SESSION['first_name'] = $mysql_array['first_name'];
                 $_SESSION['id'] = $mysql_array['user_id'];
+                $_SESSION['profile_pic'] =  $mysql_array['profile_pic'];
                 
                 
                 echo "<script>window.location.href = './home'</script>";

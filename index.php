@@ -166,7 +166,7 @@
                         <div class="image-content ">
                             <span class="overlay "></span>
                             <div class="card-image ">
-                                <img src="images/m.png " alt=" " class="card-img ">
+                                <img src="<?php echo ($tutors['profile_pic']) ? "images/profile/".$tutors['profile_pic']  : "images/m.png" ?>" alt=" " class="card-img ">
                             </div>
                         </div>
 
