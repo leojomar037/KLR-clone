@@ -40,10 +40,9 @@
                 </a>
             </li> 
             <li class="links-hover">
-                <a type="button" data-toggle="modal" data-target="#addReview">
+                <a type="button" data-bs-toggle="modal" data-bs-target="#addReview">
                     <i class="fa-solid fa-pen"></i>
                     <span class="link-name ">Add Review</span>
-                    
                 </a>
             </li>
             
@@ -60,6 +59,8 @@
     </div>
 
 </nav>
+
+
 
 <main class="main">
 <?php require('./pages/header.php')?>

@@ -43,7 +43,12 @@
                     <span class="link-name ">History</span>
                 </a>
             </li>
-            
+            <li class="links-hover">
+                <a type="button" data-bs-toggle="modal" data-bs-target="#addReview">
+                    <i class="fa-solid fa-pen"></i>
+                    <span class="link-name ">Add Review</span>
+                </a>
+            </li>
             
          
         </div>

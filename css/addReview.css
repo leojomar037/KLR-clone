@@ -1,5 +1,4 @@
 .review {
-  padding: 1rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,7 +19,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid;
   border-radius: 1rem;
 }
 
