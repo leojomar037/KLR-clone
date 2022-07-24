@@ -1,4 +1,21 @@
-<?php require('./inc/retrieve.php')?>
+<?php require('./inc/retrieve.php');
+require('./inc/loginRetrieve.php');
+
+
+
+
+
+
+
+$rowCount =mysqli_num_rows($sql_get_sched);
+// $row = mysqli_fetch_array($sql_get_schedStudent);
+if($rowCount >0){
+    require('./pages/tutors/schedule.php');
+}
+else{
+?>
+
+
 
         <div class="dash-content-tutors">
             <div class="overview">
@@ -12,11 +29,11 @@
                         <div class="content">
                             <div class="content-details">
                                 <i class="fa-solid fa-coins"></i>
-                                <span class="number">1500</span>
+                                <span class="number"><?php echo $get_total_appointments ?></span>
                             </div>
                             <div class="content-btn">
-                                <span class="text-course">Credits</span>
-                                <span class="text-enroll">View</span>
+                                <span class="text-course">Total Appointments</span>
+                               
                             </div>
                             
                         </div>
@@ -27,11 +44,11 @@
                         <div class="content">
                             <div class="content-details">
                                 <i class="fa-solid fa-calendar-check"></i>
-                                <span class="number">15</span>
+                                <span class="number"><?php echo $tutorsStudentCount ?></span>
                             </div>
                             <div class="content-btn">
                                 <span class="text-course">Total Bookings</span>
-                                <span class="text-enroll">View</span>
+                               
                             </div>
                             
                         </div>
@@ -41,12 +58,12 @@
                     <div class="box box3">
                         <div class="content">
                             <div class="content-details">
-                                <i class="bi bi-calendar-check"></i>
-                                <span class="number">10</span>
+                                <i class="fa-regular fa-calendar"></i>
+                                <span class="number"><?php echo $totalPending?></span>
                             </div>
                             <div class="content-btn">
                                 <span class="text-course">Bookings Pending</span>
-                                <span class="text-enroll">View</span>
+                               
                             </div>
                             
                         </div>
@@ -57,11 +74,11 @@
                         <div class="content">
                             <div class="content-details">
                                 <i class="bi bi-check2-square"></i>
-                                <span class="number">50</span>
+                                <span class="number"><?php echo $totalCompleted?></span>
                             </div>
                             <div class="content-btn">
                                 <span class="text-course college">Bookings Completed</span>
-                                <span class="text-enroll">View</span>
+                               
                             </div>
                             
                         </div>
@@ -73,12 +90,12 @@
                         <div class="content">
                             <div class="content-details">
                                 <i class="fa-solid fa-bars-progress"></i>
-                                <span class="number">10</span>
+                                <span class="number"><?php echo $totalCanceled?></span>
                             </div>
 
                             <div class="content-btn">
-                                <span class="text-course college">Bookings Running</span>
-                                <span class="text-enroll">View</span>
+                                <span class="text-course college">Bookings Canceled</span>
+                               
                             </div>
                             
                         </div>
@@ -88,11 +105,11 @@
                         <div class="content">
                             <div class="content-details">
                                 <i class="fa-solid fa-check-to-slot"></i>
-                                <span class="number">70</span>
+                                <span class="number"><?php echo $totalCourse?></span>
                             </div>
                             <div class="content-btn">
                                 <span class="text-course college">Total Tutoring Courses</span>
-                                <span class="text-enroll">View</span>  
+                                 
                             </div>
                         </div>
 
@@ -101,3 +118,5 @@
             </div>
             
         </div>
+
+<?php }?>

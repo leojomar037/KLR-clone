@@ -225,3 +225,7 @@
   margin: 0;
   padding: 0;
 }
+
+.bookAppointment .error i {
+  font-size: .6rem;
+}

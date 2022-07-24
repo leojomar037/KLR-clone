@@ -19,6 +19,8 @@ if(isset($_POST['bookAppointment'])){
     $id =$_POST['id'];
 
 
+    var_dump($id);
+
     if (empty($program) || empty($course) || empty($date) || empty($time) || empty($price)) {
         header("Location: ../home?errorBook=All fields are required.#bookAppointment");
         exit();
@@ -28,7 +30,6 @@ if(isset($_POST['bookAppointment'])){
         header("Location: ../home?successBook=Successfully booked.#bookAppointment");
         exit();
         }
-                    
 }
 
 

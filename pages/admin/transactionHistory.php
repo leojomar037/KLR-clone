@@ -50,7 +50,6 @@
                                 $status = "Expired";
                                 $color = 'text-muted';
                             }
-                            ;
                             
                 ?>
                     <tr>

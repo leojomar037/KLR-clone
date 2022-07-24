@@ -34,7 +34,7 @@
     $programsCount =mysqli_num_rows($sql_get_programs);
     
     // get subjects
-    $query_get_subjects = "SELECT * FROM reference_code WHERE group_name = 'Subjects'";
+    $query_get_subjects = "SELECT * FROM reference_code WHERE group_name = 'Course'";
     
     $sql_get_subjects = mysqli_query($connection,$query_get_subjects) OR trigger_error('Query FAILED SQL:$query_create ERROR:'.mysqli_error($connection),E_USER_ERROR );
     $subjectsCount =mysqli_num_rows($sql_get_subjects);

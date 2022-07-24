@@ -28,7 +28,7 @@ if($_GET['time'] && $_GET['date'] && $_GET['tutor'] && $_GET['course'] && $_GET[
             echo '<option value = "' .$optionPrice['price'].'">'.$optionPrice['price'].'</option>';
         }
     } else {
-        echo '<option value = "">No available time</option>';
+        echo '<option value = "z">No available time</option>';
     }
 }
 

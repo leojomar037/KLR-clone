@@ -10,7 +10,7 @@
 <div class="overview">
     <div class="title">
         <i class="fa-solid fa-gauge-high"></i>
-        <span class="text">Upcoming Schedule</span>
+        <span class="text">Dashboard</span>
     </div>
 
     <div class="boxes">

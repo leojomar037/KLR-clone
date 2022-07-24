@@ -23,7 +23,7 @@
             <?php 
             while ($student = mysqli_fetch_array($sql_get_tutorsStudent)){
                 $btn = false;
-                $appointment_date = date($appointment['date']);
+                $appointment_date = date($student['date']);
                 $date_appointed = new DateTime($appointment_date);
                 $date_now = new DateTime();
                 if($date_appointed < $date_now){
@@ -49,7 +49,7 @@
                 
                 ?>
                 <tr>
-                    <td><?php echo $student['student_name'] ?></td>
+                    <td><?php echo $student['name'] ?></td>
                     <td><?php echo $student['program'] ?></td>
                     <td><?php echo $student['subject'] ?></td>
                     <td><?php echo $student['date'] ?></td>

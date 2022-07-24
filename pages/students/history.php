@@ -23,23 +23,36 @@
             <?php 
             while ($student = mysqli_fetch_array($sql_get_studentsTutor)){
             $btn= false;
-                if($student['status']==2){
-                    $status = "Pending";
-                }
-                elseif($student['status']==3){
-                    $status = "Approved";
-                    $btn = true;
-                }
-                elseif($student['status']==4){
-                    $status = "Canceled";
-                }
-                elseif($student['status']==5){
-                    $status = "Completed";
-                }
+            $appointment_date = date($student['date']);
+            $date_appointed = new DateTime($appointment_date);
+            $date_now = new DateTime();
+            if($date_appointed < $date_now){
+                $student['status'] = 6;
+            }
+            if($student['status'] == 1 ){
+                $status = 'Available';
+                $color = 'text-primary';
+            } elseif($student['status'] == 2){
+                $status = "Pending";
+                $color = 'text-warning';
+            } elseif($student['status'] == 3){
+                $status = "Approved";
+                $btn = true;
+                $color = 'text-info';
+            } elseif($student['status'] == 4){
+                $status = "Cancelled";
+                $color = 'text-danger';
+            } elseif($student['status'] == 5){
+                $status = "Completed";
+                $color = 'text-success';
+            } elseif($student['status'] == 6){
+                $status = "Expired";
+                $color = 'text-muted';
+            }
                 
                 ?>
                 <tr>
-                    <td><?php echo $student['student_name'] ?></td>
+                    <td><?php echo $student['name'] ?></td>
                     <td><?php echo $student['program'] ?></td>
                     <td><?php echo $student['subject'] ?></td>
                     <td><?php echo $student['date'] ?></td>

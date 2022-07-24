@@ -24,6 +24,10 @@ html {
     color: #4D40CC;
 }
 
+.index .logo img{
+    height:10vh ;
+}
+
 .index ul {
     list-style: none;
 }
@@ -147,6 +151,10 @@ html {
 .index .showcase-text {
     -webkit-animation: slideInFromLeft 1s ease-in;
     animation: slideInFromLeft 1s ease-in;
+}
+
+.index .showcase-text h1 span {
+    font-size: 2rem;    
 }
 
 .index .showcase-form {

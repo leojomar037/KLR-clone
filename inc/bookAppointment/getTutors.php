@@ -18,7 +18,7 @@ if($_GET['course'] && $_GET['program']){
             echo '<option value = "' .$optionTutor['tutor_id'].'">'.$optionTutor['tutor_info'].'</option>';
         }
     } else {
-        echo '<option value = "">Tutors not available</option>';
+        echo '<option value = "z">Tutors not available</option>';
     }
 }
 

@@ -1,5 +1,5 @@
 <?php
-    require('./inc/bookAppointment.php');
+    // require('./inc/bookAppointment.php');
     require('./inc/retrieve.php');
 
 ?>
@@ -108,11 +108,11 @@
         <div class="box">
             <div class="inner-box">
                 <div class="forms-wrap">
-                    <form action="./bookAppointment.php" class="sign-in-form" method="post">
+                    <form action="./inc/bookAppointment.php" class="sign-in-form" method="post">
                         <div class="heading">
                             <h2>Book Appointment</h2>
                         </div>
-
+                        <input type="hidden" name="id" id="id" value="<?php echo $_SESSION['id']; ?>">
                         <div class="actual-form">
                             <div>
                                 <!--Program Name-->
@@ -142,7 +142,7 @@
 
                                  <!--Tutor-->
                                  <div class="input-wrap">
-                                    <select name="tutor" class="input-field " id="tutor" onblur="validateCourse()" onchange="getDate()">
+                                    <select name="tutor" class="input-field " id="tutor" onblur="validateTutor()" onchange="getDate()">
                                         <option value="" ></option>
                                     </select>
                                     <label>Tutor</label>

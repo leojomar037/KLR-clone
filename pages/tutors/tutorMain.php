@@ -5,7 +5,7 @@
 <nav>
     <div class="logo-name">
         <div class="logo-image">
-            <img src="images/sign-in.jpg" alt=" ">
+            <img src="images/logo.png" alt=" ">
         </div>
 
         <span class="logo_name ">KLR </span>
@@ -26,23 +26,24 @@
                 </a>
             </li>
             <li class="links-hover">
+                <a href=" #createAppointment" class="navigate-site" site="schedule">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span class="link-name ">Create Appointment</span>
+                </a>
+            </li>
+            <li class="links-hover">
                 <a href=" #students" class="navigate-site" site="students">
                     <i class="fa-solid fa-users"></i>
                     <span class="link-name ">Students</span>
                 </a>
             </li> 
             <li class="links-hover">
-                <a href=" #schedule" class="navigate-site" site="schedule">
+                <a href=" #history" class="navigate-site" site="schedule">
                     <i class="fa-solid fa-calendar"></i>
-                    <span class="link-name ">Schedules</span>
+                    <span class="link-name ">History</span>
                 </a>
             </li>
-            <li class="links-hover">
-                <a href=" #createAppointment" class="navigate-site" site="schedule">
-                    <i class="fa-solid fa-calendar-plus"></i>
-                    <span class="link-name ">Create Appointment</span>
-                </a>
-            </li>
+            
             
          
         </div>
@@ -76,8 +77,8 @@
         <?php require('./pages/tutors/tutorsStudentTable.php')?>
 
     </div>
-    <div id="schedule" class="section">
-        <?php require('./pages/tutors/schedule.php')?>
+    <div id="history" class="section">
+        <?php require('./pages/tutors/history.php')?>
     </div>
 
     <div id="createAppointment" class="section">

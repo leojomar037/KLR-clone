@@ -1,0 +1,92 @@
+.review {
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review form {
+  width: 30vw;
+  height: 50vh;
+  display: -ms-grid;
+  display: grid;
+  padding: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid;
+  border-radius: 1rem;
+}
+
+.review textarea {
+  resize: none;
+}
+
+.review .stars {
+  width: 20vw;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.review button {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 10vw;
+}
+
+.review .stars__star-icon {
+  /* border: 1px solid; */
+  height: 2rem;
+  stroke: #4D40CC;
+  stroke-width: .2rem;
+  fill: transparent;
+  -webkit-transition: .1s all;
+  transition: .1s all;
+}
+
+.review .stars__star {
+  /* width: 75px;
+    height: 75px; */
+  position: relative;
+  cursor: pointer;
+  margin: .5rem;
+}
+
+.review .stars__checkbox {
+  position: absolute;
+  top: -9999px;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.review .stars__star:hover > .stars__star-icon {
+  fill: #4D40CC;
+}
+
+.review .stars__star:hover ~ .stars__star > .stars__star-icon {
+  fill: #4D40CC;
+}
+
+.review .stars__checkbox:checked + .stars__star > .stars__star-icon {
+  fill: #4D40CC;
+}
+
+.review .stars__checkbox:checked ~ .stars__star > .stars__star-icon {
+  fill: #4D40CC;
+}

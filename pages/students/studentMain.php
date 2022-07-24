@@ -3,7 +3,7 @@
 <nav>
     <div class="logo-name">
         <div class="logo-image">
-            <img src="images/sign-in.jpg" alt=" ">
+            <img src="images/logo.png" alt=" ">
         </div>
 
         <span class="logo_name ">KLR </span>
@@ -33,9 +33,16 @@
                 </a>
             </li>
             <li class="links-hover">
-                <a href=" #studentsTutor">
+                <a href=" #history">
                     <i class="fa-solid fa-clock-rotate-left"></i>
                     <span class="link-name ">History</span>
+                    
+                </a>
+            </li> 
+            <li class="links-hover">
+                <a type="button" data-toggle="modal" data-target="#addReview">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span class="link-name ">Add Review</span>
                     
                 </a>
             </li>
@@ -68,11 +75,9 @@
         <?php require('./pages/students/bookAppointment.php')?>
     </div>
 
-    <div class="section" id="studentsTutor">
-        <?php require('./pages/students/studentsTutor.php')?>
+    <div class="section" id="history">
+        <?php require('./pages/students/history.php')?>
     </div>
 
-    
 </main>
-
 

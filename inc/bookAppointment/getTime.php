@@ -20,7 +20,7 @@ if($_GET['date'] && $_GET['tutor'] && $_GET['course'] && $_GET['program']){
             echo '<option value = "' .$optionTime['time'].'">'.$optionTime['time'].'</option>';
         }
     } else {
-        echo '<option value = "">No available time</option>';
+        echo '<option value = "z">No available time</option>';
     }
 }
 

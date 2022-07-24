@@ -25,7 +25,7 @@
     <header>
         <div class="navbar">
             <div class="container-nav flex">
-                <h2 class="con-logo"> <a href="#" class="logo">Logo</a></h2>
+                <h2 class="con-logo"> <a href="#" class="logo"><img src="/images/logo.png" alt=""></a></h2>
                 <nav class="navigation">
                     <ul id="menuList">
                         <li><a href="#home" class="active links">Home</a></li>

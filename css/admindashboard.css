@@ -76,6 +76,7 @@
 
 .adminDashboard .overview .boxes .box .text, .schedule .overview .boxes .box .text {
   font-size: 1.8rem;
+  color: black;
 }
 
 .adminDashboard .activity, .schedule .activity {

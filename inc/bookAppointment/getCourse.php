@@ -17,7 +17,7 @@ if($_GET['program']){
             echo "<option value = " .$option['course_id']. ">".$option['name']."</option>";
         }
     } else {
-        echo '<option value = "">Course not available</option>';
+        echo '<option value = "z">Course not available</option>';
     }
 } 
 

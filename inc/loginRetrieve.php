@@ -5,7 +5,7 @@ require("./connection/database.php");
 if($_SESSION['id']){
     $id = $_SESSION['id'];
  //for Tutor
-    $query_get_tutorsStudent = "SELECT a.appointment_id,b.user_id, concat(b.first_name,' ',b.last_name) AS student_name,d.name as program,  c.name as subject, a.date,a.time,a.status
+    $query_get_tutorsStudent = "SELECT a.appointment_id,b.user_id, concat(b.first_name,' ',b.last_name) AS name,d.name as program,  c.name as subject, a.date,a.time,a.status
     from appointments as a
     join users as b on a.student_id = b.user_id
     join reference_code as c on a.program_id = c.id
@@ -14,9 +14,9 @@ if($_SESSION['id']){
 
     $sql_get_tutorsStudent = mysqli_query($connection,$query_get_tutorsStudent);
 
-
+    $tutorsStudentCount = mysqli_num_rows($sql_get_tutorsStudent);
     //for Student
-    $query_get_studentsTutor = "SELECT a.appointment_id,b.user_id, concat(b.first_name,' ',b.last_name) AS student_name,d.name as program,  c.name as subject, a.date,a.time,a.status
+    $query_get_studentsTutor = "SELECT a.appointment_id,b.user_id, concat(b.first_name,' ',b.last_name) AS name,d.name as program,  c.name as subject, a.date,a.time,a.status
     from appointments as a
     join users as b on a.tutor_id = b.user_id
     join reference_code as c on a.program_id = c.id
@@ -49,9 +49,34 @@ if($_SESSION['id']){
 
     $sql_get_schedStudent = mysqli_query($connection,$query_get_schedStudent);
 
+    //total count
+    $query_get_total_appointments = "select *  from appointments where tutor_id = '$id';";
+    $sql_get_total_appointments = mysqli_query($connection,$query_get_total_appointments);
+    $get_total_appointments = mysqli_num_rows($sql_get_total_appointments);
 
-    
 
+    //total pending
+    $query_get_total_appointments = "select *  from appointments where tutor_id = '$id' && status = 2";
+    $sql_get_total_appointments = mysqli_query($connection,$query_get_total_appointments);
+    $totalPending = mysqli_num_rows($sql_get_total_appointments);
+
+    //total completed
+    $query_get_total_appointments = "select *  from appointments where tutor_id = '$id' && status = 5";
+    $sql_get_total_appointments = mysqli_query($connection,$query_get_total_appointments);
+    $totalCompleted = mysqli_num_rows($sql_get_total_appointments);
+
+    //total canceled
+    $query_get_total_appointments = "select *  from appointments where tutor_id = '$id' && status = 4";
+    $sql_get_total_appointments = mysqli_query($connection,$query_get_total_appointments);
+    $totalCanceled = mysqli_num_rows($sql_get_total_appointments);
+
+    $query_get_total_appointments = "select distinct course_id from appointments as a
+    join reference_code as b 
+    on a.course_id = b.id
+    where tutor_id = '$id';
+    ";
+    $sql_get_total_appointments = mysqli_query($connection,$query_get_total_appointments);
+    $totalCourse= mysqli_num_rows($sql_get_total_appointments);
 }
 
 

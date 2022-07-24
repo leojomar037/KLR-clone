@@ -5,7 +5,7 @@
 <nav>
     <div class="logo-name">
         <div class="logo-image">
-            <img src="images/sign-in.jpg" alt=" ">
+            <img src="images/logo.png" alt=" ">
         </div>
 
         <span class="logo_name ">KLR </span>

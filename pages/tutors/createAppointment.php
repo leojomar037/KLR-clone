@@ -55,7 +55,7 @@
                                     <div class="error" id="course_others_error"></div>
                                 </div>
 
-                                <!--Temporary-->
+                                <!--Temporary
                                 <div class="input-wrap">
                                     <input 
                                         type="number" 
@@ -68,6 +68,7 @@
                                     <label>Tutor ID</label>
                                     <div class="error" id="tutor_id_error"></div>
                                 </div>
+                                -->
 
 
                                 <!--Date-->

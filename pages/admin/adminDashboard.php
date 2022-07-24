@@ -30,7 +30,7 @@
             <div class="box box4">
                 <i class="fa-solid fa-users"></i>
                 <span class="number"><?php echo $subjectsCount ?></span>
-                <span class="text">Subjects</span>
+                <span class="text">Courses</span>
 
             </div>
         </div>
