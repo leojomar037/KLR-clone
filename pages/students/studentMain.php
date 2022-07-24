@@ -41,7 +41,7 @@
             </li> 
             <li class="links-hover">
                 <a type="button" data-toggle="modal" data-target="#addReview">
-                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <i class="fa-solid fa-pen"></i>
                     <span class="link-name ">Add Review</span>
                     
                 </a>
