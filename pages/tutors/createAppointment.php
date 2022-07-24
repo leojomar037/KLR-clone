@@ -119,11 +119,11 @@
                         <!--alert messages-->
                         <?php
                             if (isset($_GET['errorCreate'])){?>
-                                <p class = "alert alert-danger" ><i class='bi bi-exclamation-circle-fill'></i> <?php echo $_GET['errorCreate']; ?></p>    
+                                <p class = "alert alert-danger alert-dismissible fade show" role="alert" ><i class='bi bi-exclamation-circle-fill'></i> <?php echo $_GET['errorCreate']; ?></p>    
                             <?php }?>
                         <?php
                             if (isset($_GET['successCreate'])){?>
-                                <p class = "alert alert-success" ><i class="bi bi-check-circle-fill"></i> <?php echo $_GET['successCreate']; ?></p>    
+                                <p class = "alert alert-success" role="alert" ><i class="bi bi-check-circle-fill"></i> <?php echo $_GET['successCreate']; ?></p>    
                             <?php }?>
 
                         <!--submit button-->

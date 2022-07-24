@@ -83,7 +83,8 @@
     </div>
 
     <div id="subjects" class="section">
-        <?php require('./pages/admin/subjectsTable.php')?>
+        <?php //require('./pages/admin/subjectsTable.php')?>
+        <?php require('./pages/admin/transactionHistory.php')?>
     </div>
 
     <div id="programs" class="section">

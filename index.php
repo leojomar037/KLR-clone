@@ -57,8 +57,8 @@
     <section class="showcase " id="home">
         <div class="container grid">
             <div class="showcase-text">
-                <h1>Giving you a<br><span> KLR</span> future</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi recusandae totam hic natus fugiat reiciendis accusamus optio nulla .</p>
+                <h1>Giving you a<br><span > KLR</span> future</h1>
+                <p>Connecting tutors and students whenever and wherever all over the Philippines 24/7</p>
                 <a href="# " class="btn btn-outline ">More Info</a>
             </div>
 
