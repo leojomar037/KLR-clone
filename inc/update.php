@@ -75,7 +75,8 @@ if(isset($_POST['cancel'])){
     $query_update_status = "UPDATE appointments SET status = '4' WHERE appointment_id = '$id'";
     $sql_update_status = mysqli_query($connection, $query_update_status) OR trigger_error('Query FAILED! sql:$query_update ERROR: '.mysqli_error($connection), E_USER_ERROR);
 
-    echo "<script>alert('Successfully updated!')</script>";
+    // echo "<script>alert('Successfully updated!')</script>";
+    header("Location: ../home.php?successCancel=Successfully cancelled.#students");
     echo "<script>window.location.href = '../home#$table'</script>";
 }
 if(isset($_POST['approve'])){
