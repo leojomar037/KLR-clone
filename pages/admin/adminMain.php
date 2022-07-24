@@ -66,7 +66,7 @@
     <?php require('./pages/header.php')?>
     <div class="show-page"></div>
 
-    <div id="dashboard" class="section">
+    <div id="dashboard" class="section">  
         <?php require('./pages/admin/adminDashboard.php')?>
     </div>
 

@@ -40,7 +40,7 @@
                 </a>
             </li> 
             <li class="links-hover">
-                <a type="button" data-toggle="modal" data-target="#addReview">
+                <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <i class="fa-solid fa-clock-rotate-left"></i>
                     <span class="link-name ">Add Review</span>
                     
@@ -60,6 +60,11 @@
     </div>
 
 </nav>
+<button type="button" class="btn btn-primary" >
+    Launch demo modal
+  </button>
+
+
 
 <main class="main">
 <?php require('./pages/header.php')?>
