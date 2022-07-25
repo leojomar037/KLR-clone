@@ -47,7 +47,7 @@ if (isset($_POST['update'])) {
             }
     
             if($birthdate == ""){
-                $birthdate = '0000-00-00';
+                $birthdate = '1970-01-01';
             }
             $query_update = "UPDATE users SET first_name = '$first_name', last_name = '$last_name', gender = '$gender', civil_status = '$civil_status', 
             mobile_number = '$mobile_number', address = '$address', birthdate = '$birthdate',profile_pic = '$profile' WHERE user_id = '$id'";
@@ -73,7 +73,7 @@ if (isset($_POST['update'])) {
             }
     
             if($birthdate == ""){
-                $birthdate = '0000-00-00';
+                $birthdate = '1970-01-01';
             }
             $query_update = "UPDATE users SET first_name = '$first_name', last_name = '$last_name', gender = '$gender', civil_status = '$civil_status', 
             mobile_number = '$mobile_number', address = '$address', birthdate = '$birthdate',profile_pic = '$profile' WHERE user_id = '$id'";
