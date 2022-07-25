@@ -6,7 +6,7 @@
         $role = "Tutor";
     }
     elseif($_SESSION['role'] == 3){
-        $role = "Students";
+        $role = "Student";
     }
 ?>
 

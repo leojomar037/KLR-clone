@@ -61,7 +61,7 @@
                             elseif($user['role']==2){
                                 $role = "Tutor";
                             }
-                            elseif($user['role']==1){
+                            elseif($user['role']==3){
                                 $role = "Student";
                             }
                     ?> 

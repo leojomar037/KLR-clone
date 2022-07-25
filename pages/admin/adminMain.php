@@ -8,7 +8,7 @@
             <img src="images/logo.png" alt=" ">
         </div>
 
-        <span class="logo_name ">KLR </span>
+        <span class="logo_name "> </span>
     </div>
     <div class="menu-items">
         <div>
